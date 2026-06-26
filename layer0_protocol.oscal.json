@@ -1092,6 +1092,1223 @@
             ]
           }
         ]
+      },
+      {
+        "uuid": "801a5adf-32c0-58f4-aaa6-a0138a35e4be",
+        "type": "software",
+        "title": "nist-iso42001-crosswalk-mcp",
+        "description": "nist-iso42001-crosswalk-mcp \u2014 CSOAI Layer-0 component governing: NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0cc7760d-2577-5d05-8507-062fb7dc42fb",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by nist-iso42001-crosswalk-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "963ab11a-1e37-5a3d-a596-d3a536d6d981",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by nist-iso42001-crosswalk-mcp."
+              },
+              {
+                "uuid": "3019f347-502c-5ec2-94a7-a09d8985aa87",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by nist-iso42001-crosswalk-mcp."
+              },
+              {
+                "uuid": "805aa477-d922-5e56-953f-6cc766503d8d",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by nist-iso42001-crosswalk-mcp."
+              },
+              {
+                "uuid": "cf7a4bb6-86e1-5b6f-a461-a26192ce9419",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by nist-iso42001-crosswalk-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "edfeaf3c-14c5-5d07-819e-d934805d8774",
+        "type": "software",
+        "title": "ll144-bias-audit-mcp",
+        "description": "ll144-bias-audit-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, ECOA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, ECOA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0e791081-1dd8-51a5-bd68-2906bcf5676b",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by ll144-bias-audit-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f490a562-cede-5c5d-a5da-b287dce7f050",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by ll144-bias-audit-mcp."
+              },
+              {
+                "uuid": "c0bc7f5e-76f3-5dfa-ad39-edf5293b44d0",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by ll144-bias-audit-mcp."
+              },
+              {
+                "uuid": "5ed1dd5a-c44b-569e-be21-dd3c30683efc",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by ll144-bias-audit-mcp."
+              },
+              {
+                "uuid": "92b5b47c-acb7-5118-8061-38830cce1cc6",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by ll144-bias-audit-mcp."
+              },
+              {
+                "uuid": "a70cc423-5fa6-5942-bea0-3037013ac543",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by ll144-bias-audit-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "42ad6798-5348-5221-947b-d8a4bcbe90d8",
+        "type": "software",
+        "title": "agent-identity-trust-mcp",
+        "description": "agent-identity-trust-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "b6af669c-a681-53f2-9b7f-4c60be4a90a2",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-identity-trust-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "49679d4d-7b09-52e7-9651-b2086f4a282b",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-identity-trust-mcp."
+              },
+              {
+                "uuid": "588c16d4-ce96-5b89-87d5-be454d0853cd",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-identity-trust-mcp."
+              },
+              {
+                "uuid": "af1abef0-73ab-5973-98d5-b852ebd94465",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-identity-trust-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "28c78483-f192-59f9-8469-acbfd60d3c60",
+        "type": "software",
+        "title": "agent-policy-enforcement-mcp",
+        "description": "agent-policy-enforcement-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "3f61dc98-8d8a-5980-89c0-a07d14fb17a8",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-policy-enforcement-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "2a2736f3-4561-541f-8b52-19b97777786b",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-policy-enforcement-mcp."
+              },
+              {
+                "uuid": "88afc5ec-c123-55c8-927c-7f90184d38c6",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-policy-enforcement-mcp."
+              },
+              {
+                "uuid": "3723e645-952c-535e-819c-cddfab320174",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-policy-enforcement-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "df9118dd-5a39-5686-8f6e-9931df201cfe",
+        "type": "software",
+        "title": "agent-incident-relay-mcp",
+        "description": "agent-incident-relay-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, NIS2.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, NIS2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "6381f4f4-c8da-5dcb-9046-ae440d0da0a1",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-incident-relay-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f91969fe-9caa-53ee-a0b7-c242916fdb4d",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-incident-relay-mcp."
+              },
+              {
+                "uuid": "916d582d-1d14-5743-a546-27af6b0789ec",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by agent-incident-relay-mcp."
+              },
+              {
+                "uuid": "ef9dacd4-fbb0-5fc8-9588-c389b52dfc1c",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-incident-relay-mcp."
+              },
+              {
+                "uuid": "74550f62-bb71-548c-a165-b4946038b817",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by agent-incident-relay-mcp."
+              },
+              {
+                "uuid": "1586558b-87d7-5ae1-ac46-7452e6f32712",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-incident-relay-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "548614fd-927d-52a5-88c2-53f1ed950f7f",
+        "type": "software",
+        "title": "agent-incident-reporter-mcp",
+        "description": "agent-incident-reporter-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "8ab89767-ebaf-578d-8627-b1075c4914ba",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-incident-reporter-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f53a664e-f544-5851-81d1-dd893f43b799",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-incident-reporter-mcp."
+              },
+              {
+                "uuid": "16985baf-c891-59a8-a519-a2cf5c8b70cf",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-incident-reporter-mcp."
+              },
+              {
+                "uuid": "49a1475d-2b5b-5f8e-97b6-61ced67a0749",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-incident-reporter-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "83949976-6dac-5af9-b010-56b7b1404477",
+        "type": "software",
+        "title": "agent-prompt-injection-firewall-mcp",
+        "description": "agent-prompt-injection-firewall-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "9785953c-c107-523d-addb-a33242dbdb0e",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-prompt-injection-firewall-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "961fc747-b65e-5801-bce9-274e1689e2e2",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-prompt-injection-firewall-mcp."
+              },
+              {
+                "uuid": "172166c7-ca1f-5a74-84c0-002a8aad348e",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-prompt-injection-firewall-mcp."
+              },
+              {
+                "uuid": "e9677d80-f5b0-5a5a-903b-5bc9e8d88eb5",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-prompt-injection-firewall-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "8ffba721-fa7f-59e0-b7fb-7adb0a8c1582",
+        "type": "software",
+        "title": "agent-x402-paywall-mcp",
+        "description": "agent-x402-paywall-mcp \u2014 CSOAI Layer-0 component governing: DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "60346d6e-b31f-509f-940a-14eb18fb0718",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-x402-paywall-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "e9211516-4e4d-5d9f-bb28-1c0dca25bf6b",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by agent-x402-paywall-mcp."
+              },
+              {
+                "uuid": "4235fd7c-3bb7-572f-b90b-99a76728bf50",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by agent-x402-paywall-mcp."
+              },
+              {
+                "uuid": "31f6383e-6181-522f-b3d3-1ddae207688a",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by agent-x402-paywall-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "a661f92c-9e6f-5888-bf7b-6532102fb01f",
+        "type": "software",
+        "title": "agent-handoff-certified-mcp",
+        "description": "agent-handoff-certified-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "c28a604e-317e-5376-93c2-9eaf189cca70",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-handoff-certified-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "132d6502-b665-5287-9f3b-32ba389266b0",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-handoff-certified-mcp."
+              },
+              {
+                "uuid": "df0377df-c064-54b3-bb53-f61087cc4a5c",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-handoff-certified-mcp."
+              },
+              {
+                "uuid": "e3d6a964-fdd3-5e6a-8316-1d9a5df17da9",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-handoff-certified-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "dfda136c-ae70-51c5-970e-d8cd64b9a0bc",
+        "type": "software",
+        "title": "agent-audit-logger-mcp",
+        "description": "agent-audit-logger-mcp \u2014 CSOAI Layer-0 component governing: SOX, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f9fb6c9c-fdf4-5666-9f12-b94368d36805",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-audit-logger-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "a3f63cd2-f571-5dce-941a-dfb559dafaf7",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by agent-audit-logger-mcp."
+              },
+              {
+                "uuid": "48baf973-66b8-5c33-b34a-9f36253cf597",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by agent-audit-logger-mcp."
+              },
+              {
+                "uuid": "fbfada19-31aa-5cbc-841a-380a57c139fc",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by agent-audit-logger-mcp."
+              },
+              {
+                "uuid": "c696b09c-cd79-5bb9-95ba-f1d02379d383",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by agent-audit-logger-mcp."
+              },
+              {
+                "uuid": "5059198c-1bfb-5b7b-aecc-6da4eff08f00",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by agent-audit-logger-mcp."
+              },
+              {
+                "uuid": "30c67e95-c608-5d52-96ae-76d85358ca50",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by agent-audit-logger-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "141ddc7c-23bd-548d-b3a5-4c8ff0e490b2",
+        "type": "software",
+        "title": "agent-mcp-router-mcp",
+        "description": "agent-mcp-router-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "72527c9d-852b-5374-815d-2b413f9d1833",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-mcp-router-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "5938f3c5-b6a2-52ed-8e5c-1b7f71edec9a",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-mcp-router-mcp."
+              },
+              {
+                "uuid": "b91c7c33-ff1d-5408-8515-8e8e89a734f9",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-mcp-router-mcp."
+              },
+              {
+                "uuid": "d749bb1d-f39f-5a10-8315-6cd3effface9",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-mcp-router-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "2fafa816-d515-55cf-94fa-a5536b059ecc",
+        "type": "software",
+        "title": "agent-rate-limiter-mcp",
+        "description": "agent-rate-limiter-mcp \u2014 CSOAI Layer-0 component governing: NIS2.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIS2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "086c4af4-278f-50af-bf28-e3c0827fc81a",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-rate-limiter-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "162a1bac-23b6-5145-948c-0593f831b604",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by agent-rate-limiter-mcp."
+              },
+              {
+                "uuid": "18e23422-b607-5659-a266-db0c40015e3b",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by agent-rate-limiter-mcp."
+              },
+              {
+                "uuid": "12ea2263-68c7-5321-b2bc-5a635db20f86",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-rate-limiter-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "96dc8506-9c1b-5b59-b54d-847ff04bee34",
+        "type": "software",
+        "title": "agent-data-residency-mcp",
+        "description": "agent-data-residency-mcp \u2014 CSOAI Layer-0 component governing: GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0bd79938-1f40-5365-be25-8250258a9bc2",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-data-residency-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "6d0057ac-47d6-5405-8f7d-2703200d8ef9",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by agent-data-residency-mcp."
+              },
+              {
+                "uuid": "b466a1c4-5213-5198-8d12-204bacd80d4c",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by agent-data-residency-mcp."
+              },
+              {
+                "uuid": "e80d3f8f-7b03-5e01-962b-6dd730277e88",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by agent-data-residency-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "bd47e126-2888-58f2-8be2-0a4ea5c0b669",
+        "type": "software",
+        "title": "agent-cost-allocator-mcp",
+        "description": "agent-cost-allocator-mcp \u2014 CSOAI Layer-0 component governing: SOX.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "3810885a-2a06-5927-baa8-87c13f2c9fcf",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-cost-allocator-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "3b3473bb-5bab-587e-afeb-126e7498fcc5",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by agent-cost-allocator-mcp."
+              },
+              {
+                "uuid": "6d49841c-384e-529c-b032-8aeccd7cbf0c",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by agent-cost-allocator-mcp."
+              },
+              {
+                "uuid": "ad597cad-f4d4-5c67-a6d6-40d95df97ae9",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by agent-cost-allocator-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "27900452-cc1d-5929-ae94-0dd824cbc097",
+        "type": "software",
+        "title": "agent-token-budget-mcp",
+        "description": "agent-token-budget-mcp \u2014 CSOAI Layer-0 component governing: SOX.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "eeb14522-0cea-5bd9-8233-084fefa86aa3",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-token-budget-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "307211da-9875-51d0-8396-cf23236ef57b",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by agent-token-budget-mcp."
+              },
+              {
+                "uuid": "e9afd0d1-a321-5afe-add6-37645fb5360c",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by agent-token-budget-mcp."
+              },
+              {
+                "uuid": "1de3f542-0b19-57ce-bdf8-92610c9b6e27",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by agent-token-budget-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ae92b083-fc43-53b0-87ce-3232454d2dfd",
+        "type": "software",
+        "title": "agent-orchestrator-mcp",
+        "description": "agent-orchestrator-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f752fa48-614a-5414-95c6-99145c57d755",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-orchestrator-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "86d23b7b-ffa3-5a6d-a2b5-ea690e1d65ef",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-orchestrator-mcp."
+              },
+              {
+                "uuid": "a59bef6f-f31d-5656-9664-cf5f0541539d",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-orchestrator-mcp."
+              },
+              {
+                "uuid": "dce5fa1f-b78d-5bee-9324-4631b66d0090",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-orchestrator-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "c20b06a6-555e-5b0d-bc5d-23c99192bc78",
+        "type": "software",
+        "title": "agent-negotiation-mcp",
+        "description": "agent-negotiation-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "141064e6-8ca8-5047-bdf6-9296ac9821cd",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-negotiation-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "db4a9bc3-3bd8-529f-a629-8a08c3f4a6ac",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-negotiation-mcp."
+              },
+              {
+                "uuid": "da205a7a-fa48-5213-a0ae-187e108b3063",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-negotiation-mcp."
+              },
+              {
+                "uuid": "d2ff5316-2a33-58a0-9f2e-937e1f71647f",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-negotiation-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "845c7304-5552-5445-8cbd-f6985339cc3a",
+        "type": "software",
+        "title": "agent-delegation-mcp",
+        "description": "agent-delegation-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0e87f9c1-76bd-5b50-89fb-2836907c1fcb",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-delegation-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f72b6759-3b56-502b-9a78-b325b16cca08",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-delegation-mcp."
+              },
+              {
+                "uuid": "f11358f7-7920-5965-b2b5-775e3d63e6e9",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-delegation-mcp."
+              },
+              {
+                "uuid": "08bf922b-0b6e-5cbf-a669-ce6dae2f0eb5",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-delegation-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "d816a35b-9c3b-5a7b-8709-e2aff28bbf6a",
+        "type": "software",
+        "title": "agent-replay-debugger-mcp",
+        "description": "agent-replay-debugger-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "587b6d76-bff1-58b0-9c20-253533bc7694",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-replay-debugger-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "b788887a-3ee4-57de-a4ac-e9b9c08e2d80",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-replay-debugger-mcp."
+              },
+              {
+                "uuid": "2f36b451-cb01-5736-abaa-36a356cb266b",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-replay-debugger-mcp."
+              },
+              {
+                "uuid": "3af6c42c-b3fd-5ae2-b9e1-e09b82067c85",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-replay-debugger-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "38f8c1c4-4463-52f9-ae66-2dc876004cba",
+        "type": "software",
+        "title": "agent-commerce-protocol-mcp",
+        "description": "agent-commerce-protocol-mcp \u2014 CSOAI Layer-0 component governing: DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "c824890e-333f-5f91-9242-dcb85e244adb",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-commerce-protocol-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "e0e6682a-1713-5d04-b29e-f1d4a0d67c7b",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by agent-commerce-protocol-mcp."
+              },
+              {
+                "uuid": "e408883b-82d1-57a6-ba41-b49f0a9bdb1b",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by agent-commerce-protocol-mcp."
+              },
+              {
+                "uuid": "7fbe926f-9878-59c2-b9ef-ebe45579e10b",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by agent-commerce-protocol-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "0562b4d6-7336-5582-846d-33e642aa7517",
+        "type": "software",
+        "title": "agent-commerce-payments-mcp",
+        "description": "agent-commerce-payments-mcp \u2014 CSOAI Layer-0 component governing: PCI-DSS, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "PCI-DSS, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "2739e45e-fb14-5c58-95bd-64d58027dd98",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-commerce-payments-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "e859a271-8249-5b0e-81bd-4d97f02a7fb3",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by agent-commerce-payments-mcp."
+              },
+              {
+                "uuid": "c7f092eb-5e2c-5355-90a9-9ef80e1fc20d",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by agent-commerce-payments-mcp."
+              },
+              {
+                "uuid": "c13989c1-2b8e-51d3-86ed-d3254f7bb4f7",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by agent-commerce-payments-mcp."
+              },
+              {
+                "uuid": "db9003d9-28e6-51f8-8993-5ee18bacc4fd",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by agent-commerce-payments-mcp."
+              },
+              {
+                "uuid": "e74bc9d3-e6ad-59e5-84dc-e311bb7e0411",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by agent-commerce-payments-mcp."
+              },
+              {
+                "uuid": "d3d52d3d-bd53-52ad-8b5d-7fc18212341c",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by agent-commerce-payments-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ab2f2073-feab-53a7-9170-1d39d1043b9c",
+        "type": "software",
+        "title": "agent-content-watermark-mcp",
+        "description": "agent-content-watermark-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "efbcda30-0b7e-513a-8966-d61184d6c6d6",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by agent-content-watermark-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "37707305-f367-5f5a-a004-8824964d5692",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by agent-content-watermark-mcp."
+              },
+              {
+                "uuid": "005a8363-e913-521e-9b32-acb481acbb09",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by agent-content-watermark-mcp."
+              },
+              {
+                "uuid": "6f74a7cc-04b1-5404-8992-6c944b285ac7",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by agent-content-watermark-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "02efb8b5-0b19-5a2a-8800-81db5ea06e27",
+        "type": "software",
+        "title": "eu-ai-act-compliance-mcp",
+        "description": "eu-ai-act-compliance-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "2f205af8-b481-5fb0-93c0-2066b2795ca7",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by eu-ai-act-compliance-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "89d2a06b-2e50-54bb-b6e0-165dfb84ba6a",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by eu-ai-act-compliance-mcp."
+              },
+              {
+                "uuid": "a201aac4-66a9-5c52-a2a5-e54ac15b089c",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by eu-ai-act-compliance-mcp."
+              },
+              {
+                "uuid": "c9eaaabd-2b84-5302-a178-cf53a7a38ad6",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by eu-ai-act-compliance-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "a34c36c1-b433-5f09-b2d4-12d89a95f6ce",
+        "type": "software",
+        "title": "dora-compliance-mcp",
+        "description": "dora-compliance-mcp \u2014 CSOAI Layer-0 component governing: DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "8184d010-fa92-525d-810a-c34216a091ad",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by dora-compliance-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "8c165a27-bffd-5092-87de-d7d08923d558",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by dora-compliance-mcp."
+              },
+              {
+                "uuid": "02eab7a9-a0db-50bf-bc1f-d25a5df18208",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by dora-compliance-mcp."
+              },
+              {
+                "uuid": "8bc9722e-23ca-58db-9489-fd98d246fe0a",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by dora-compliance-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "49477f48-565b-556e-b3c5-5d290648afdd",
+        "type": "software",
+        "title": "nis2-compliance-mcp",
+        "description": "nis2-compliance-mcp \u2014 CSOAI Layer-0 component governing: NIS2.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIS2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f3e9e2d7-1e57-570f-bc11-64874a88200d",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by nis2-compliance-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "211ff84e-8898-5007-a234-bc6151f9aa65",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by nis2-compliance-mcp."
+              },
+              {
+                "uuid": "18961204-c9fc-5eb0-8e23-ad74f348bbf3",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by nis2-compliance-mcp."
+              },
+              {
+                "uuid": "3ee0f890-484f-5c14-b72a-3a060a01a645",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by nis2-compliance-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "58b5fb2f-90a1-5fca-b118-9caa0da2919f",
+        "type": "software",
+        "title": "hipaa-compliance-mcp",
+        "description": "hipaa-compliance-mcp \u2014 CSOAI Layer-0 component governing: HIPAA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "HIPAA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0ba31dcf-4bf9-5b10-9f1c-1132579eb38d",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by hipaa-compliance-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "c46f2747-688e-517a-bfb3-223052972c67",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by hipaa-compliance-mcp."
+              },
+              {
+                "uuid": "262d0484-ec36-52a0-af9e-fc7edb1a9da4",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by hipaa-compliance-mcp."
+              },
+              {
+                "uuid": "474e9f21-0499-5dd2-ae84-f7605f6318dd",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by hipaa-compliance-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "3da62c89-e0f3-5411-8cdc-d48e3ac953af",
+        "type": "software",
+        "title": "pci-dss-mcp",
+        "description": "pci-dss-mcp \u2014 CSOAI Layer-0 component governing: PCI-DSS.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "PCI-DSS"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "c66f5df1-c4a0-585f-84e1-06daf8d2238d",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by pci-dss-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "20f42795-2876-593e-8afc-5adeb9b7d959",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by pci-dss-mcp."
+              },
+              {
+                "uuid": "2d6c3e93-85ab-519b-bfb0-60f8618d30a5",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by pci-dss-mcp."
+              },
+              {
+                "uuid": "88fe36d0-b74d-58fe-852a-f723791f090c",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by pci-dss-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "2c26bd5d-1310-5be2-979f-95d780f57106",
+        "type": "software",
+        "title": "gdpr-compliance-ai-mcp",
+        "description": "gdpr-compliance-ai-mcp \u2014 CSOAI Layer-0 component governing: GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "7af22596-6743-5883-9585-c88319791213",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by gdpr-compliance-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "42160879-7485-5751-b0a4-e38311cf401d",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by gdpr-compliance-ai-mcp."
+              },
+              {
+                "uuid": "a03c9648-ac14-5c57-a233-0d4234ba3b16",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by gdpr-compliance-ai-mcp."
+              },
+              {
+                "uuid": "e9234d1e-d5f1-537a-9cfd-3b00181e12b2",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by gdpr-compliance-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ff3db9ed-1fc8-5267-83ab-d0e14638a05a",
+        "type": "software",
+        "title": "mifid-ii-ai-mcp",
+        "description": "mifid-ii-ai-mcp \u2014 CSOAI Layer-0 component governing: MiFID II.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "MiFID II"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "52d15685-06d0-5269-80e5-ff59e85b70db",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by mifid-ii-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "c0dcad0f-3f79-5d5f-8a0e-9ec92d3e641f",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by mifid-ii-ai-mcp."
+              },
+              {
+                "uuid": "0007c466-66f1-579e-bb04-3f37ab0bb405",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by mifid-ii-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "557f19cc-4d5b-59cd-923a-681648ebe573",
+        "type": "software",
+        "title": "aml-ai-mcp",
+        "description": "aml-ai-mcp \u2014 CSOAI Layer-0 component governing: AML.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "AML"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "cb4b36b4-17b1-5449-bd6c-5f4dd83dd00a",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by aml-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "7e904552-0ff0-5339-9ec0-59fb1dedad3b",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by aml-ai-mcp."
+              },
+              {
+                "uuid": "e0fc18fb-a2cf-504e-b27b-358a8d7481c3",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by aml-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "b5309623-2fe9-50f7-b743-35a6020c9771",
+        "type": "software",
+        "title": "basel-ai-overlay-mcp",
+        "description": "basel-ai-overlay-mcp \u2014 CSOAI Layer-0 component governing: NIST, SOX.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, SOX"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "8678c5ad-4e0a-5e69-9bc4-0b07983edba0",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by basel-ai-overlay-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "b11c131f-8adc-5d81-ac9c-399d001a5096",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by basel-ai-overlay-mcp."
+              },
+              {
+                "uuid": "ca76a2a2-8526-521a-9b9a-13ab57b8b138",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by basel-ai-overlay-mcp."
+              },
+              {
+                "uuid": "eb1524f2-9d90-5989-bbc6-74881fd64f91",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by basel-ai-overlay-mcp."
+              },
+              {
+                "uuid": "e222541a-27b2-55c8-9a3f-b45f32f520f9",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by basel-ai-overlay-mcp."
+              },
+              {
+                "uuid": "2be13fb0-462a-54c4-84ec-0ac3a310d5f7",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by basel-ai-overlay-mcp."
+              },
+              {
+                "uuid": "93a0295c-87e1-5c03-ba4c-9eff1e76844d",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by basel-ai-overlay-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "28c1b878-447a-5892-935c-958bce2dba9d",
+        "type": "software",
+        "title": "soc2-compliance-ai-mcp",
+        "description": "soc2-compliance-ai-mcp \u2014 CSOAI Layer-0 component governing: NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f08363b1-b12f-59c3-a20a-c0cb89f6e079",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by soc2-compliance-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "aed96cba-31ba-563f-854a-6d10b94cb2cb",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by soc2-compliance-ai-mcp."
+              },
+              {
+                "uuid": "8c4c03bb-1b24-5e2c-93a5-cc26cc3719e2",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by soc2-compliance-ai-mcp."
+              },
+              {
+                "uuid": "d07187a8-0535-5521-827a-1ea8c325ecfd",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by soc2-compliance-ai-mcp."
+              },
+              {
+                "uuid": "f664fdfe-8c04-57ea-a559-61fa81d97a42",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by soc2-compliance-ai-mcp."
+              }
+            ]
+          }
+        ]
       }
     ]
   }
