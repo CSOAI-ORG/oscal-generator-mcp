@@ -42,6 +42,35 @@ def test_validate_flags_missing_metadata():
     assert any("metadata" in e for e in v.errors)
 
 
+def test_sign_oscal_then_verify_roundtrip():
+    doc = srv.generate_ssp("Signed System", ts=0).document
+    sig = srv.sign_oscal(doc)
+    assert sig.algorithm == "Ed25519" and sig.signature and sig.public_key
+    v = srv.verify_oscal_signature(doc, sig.signature, sig.public_key)
+    assert v["valid"] is True
+
+
+def test_verify_rejects_tampered_document():
+    doc = srv.generate_ssp("Tamper Test", ts=0).document
+    sig = srv.sign_oscal(doc)
+    doc["system-security-plan"]["metadata"]["title"] = "TAMPERED"
+    v = srv.verify_oscal_signature(doc, sig.signature, sig.public_key)
+    assert v["valid"] is False
+
+
+def test_verify_rejects_tampered_signature():
+    doc = srv.generate_ssp("Sig Tamper", ts=0).document
+    sig = srv.sign_oscal(doc)
+    bad = ("0" if sig.signature[0] != "0" else "1") + sig.signature[1:]
+    v = srv.verify_oscal_signature(doc, bad, sig.public_key)
+    assert v["valid"] is False
+
+
+def test_signature_is_deterministic_for_same_doc():
+    doc = srv.generate_ssp("Det Sig", ts=0).document
+    assert srv.sign_oscal(doc).signature == srv.sign_oscal(doc).signature  # Ed25519 deterministic
+
+
 def test_rfc0024_readiness_scoring():
     none = srv.rfc0024_readiness()
     assert none.ready is False and none.score == 0 and len(none.gaps) == 5
