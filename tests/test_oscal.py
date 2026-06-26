@@ -78,3 +78,23 @@ def test_rfc0024_readiness_scoring():
     assert full.ready is True and full.score == 100 and not full.gaps
     partial = srv.rfc0024_readiness(has_ssp=True, machine_readable=True)
     assert 0 < partial.score < 100
+
+
+def test_protocol_package_signs_whole_layer0():
+    comps = [{"name": "cobol-bridge-mcp", "frameworks": ["SOX", "DORA"]},
+             {"name": "hl7-fhir-bridge-mcp", "frameworks": ["HIPAA", "GDPR"]},
+             {"name": "scada-bridge-mcp", "frameworks": ["IEC 62443", "NIS2"]}]
+    pkg = srv.generate_protocol_package("Test Protocol", comps, ts=0)
+    assert pkg.component_count == 3
+    assert pkg.signature and pkg.public_key
+    # the whole package verifies, and each component carries mapped controls
+    assert srv.verify_oscal_signature(pkg.document, pkg.signature, pkg.public_key)["valid"] is True
+    cdef = pkg.document["component-definition"]
+    assert len(cdef["components"]) == 3
+    assert cdef["components"][0]["control-implementations"][0]["implemented-requirements"]
+
+
+def test_protocol_package_detects_tamper():
+    pkg = srv.generate_protocol_package("Tamper P", [{"name": "x", "frameworks": ["GDPR"]}], ts=0)
+    pkg.document["component-definition"]["components"][0]["title"] = "EVIL"
+    assert srv.verify_oscal_signature(pkg.document, pkg.signature, pkg.public_key)["valid"] is False

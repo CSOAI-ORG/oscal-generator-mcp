@@ -1,0 +1,1098 @@
+{
+  "component-definition": {
+    "uuid": "1b17824e-64c8-5c4a-8297-596feb7eaa0d",
+    "metadata": {
+      "title": "CSOAI Layer-0 Protocol \u2014 Layer-0 OSCAL Protocol Package",
+      "last-modified": "1970-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "ec56cdf9-ff78-50c3-92dd-3e02d7d871d9",
+          "type": "organization",
+          "name": "CSOAI-governed system owner"
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "eb0316c8-d72d-510b-be87-037a11584b1c",
+        "type": "software",
+        "title": "cobol-bridge-mcp",
+        "description": "cobol-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX, DORA, PCI-DSS.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, DORA, PCI-DSS"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "b9767df7-acb9-5a83-b5b6-045be0337fb6",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by cobol-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "562a403f-94cf-5c50-859e-19496b10bba8",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "5475c628-0b21-5e9d-95e6-e879b45559ac",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "92141715-9f0d-57ea-b8a0-20adb51505fe",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "7ef7168e-7fd9-546b-98d0-be5199378a02",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "2ecd5608-df4b-58a1-8684-3c10b158b5bd",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "a5b69da0-6346-5e7b-9ccd-c72ee67c462a",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "1d05c1cd-53be-520c-a22e-922ee9721542",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by cobol-bridge-mcp."
+              },
+              {
+                "uuid": "e246a9e8-95ab-5c51-9bc8-be8c30d095c4",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by cobol-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "7e3068f2-cb1c-5378-9381-d1e556974719",
+        "type": "software",
+        "title": "iso20022-bridge-mcp",
+        "description": "iso20022-bridge-mcp \u2014 CSOAI Layer-0 component governing: ISO 20022, DORA, NIS2, AML.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "ISO 20022, DORA, NIS2, AML"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "13b9133c-ef85-5351-9bd3-79718b452ab4",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by iso20022-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "3bbf8f8a-9e4c-5f06-aa7c-1075ddd49cf3",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by iso20022-bridge-mcp."
+              },
+              {
+                "uuid": "b149a159-62ab-5f77-8f71-51f79293517b",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by iso20022-bridge-mcp."
+              },
+              {
+                "uuid": "65b4445b-e8c7-585e-a2f6-82631a49554b",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by iso20022-bridge-mcp."
+              },
+              {
+                "uuid": "70d68b94-fa28-506c-8107-07231a04a42b",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by iso20022-bridge-mcp."
+              },
+              {
+                "uuid": "45d9d78f-093d-57e8-b05e-1819797d729c",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by iso20022-bridge-mcp."
+              },
+              {
+                "uuid": "9415f7ec-d052-5f57-8c06-953f00aa854e",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by iso20022-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "bda3f62a-4b82-5f70-be0b-81732d5f4409",
+        "type": "software",
+        "title": "hl7-fhir-bridge-mcp",
+        "description": "hl7-fhir-bridge-mcp \u2014 CSOAI Layer-0 component governing: HIPAA, EU MDR, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "HIPAA, EU MDR, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "964baddc-f624-57d7-9da7-c0eb19368e29",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by hl7-fhir-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "9687ebd9-37df-5274-972c-da355118ca75",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by hl7-fhir-bridge-mcp."
+              },
+              {
+                "uuid": "8a771497-6532-5069-a646-6bc12c6902b3",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by hl7-fhir-bridge-mcp."
+              },
+              {
+                "uuid": "c942190e-e27e-5324-9f76-603674aa2ee9",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by hl7-fhir-bridge-mcp."
+              },
+              {
+                "uuid": "0474d190-de0f-563d-bd76-04db565a06da",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by hl7-fhir-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "41e1be2d-c0ef-5f8b-99ce-433b59e64a74",
+        "type": "software",
+        "title": "as400-bridge-mcp",
+        "description": "as400-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "2ff36583-47fd-5be5-be9b-8eafad581f66",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by as400-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "c20d62f9-fa39-58ca-8a33-f012946320bc",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by as400-bridge-mcp."
+              },
+              {
+                "uuid": "3aeae661-62bb-5d11-abcb-ddff2bc29ad5",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by as400-bridge-mcp."
+              },
+              {
+                "uuid": "d4db8178-4d33-5275-a821-5cffd6aea73c",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by as400-bridge-mcp."
+              },
+              {
+                "uuid": "dd29525c-6d70-5338-95d3-9a38c7c36ca3",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by as400-bridge-mcp."
+              },
+              {
+                "uuid": "cc52e29d-77c0-5db1-bf0f-aa0564fcc41e",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by as400-bridge-mcp."
+              },
+              {
+                "uuid": "49ab21a8-20a4-566a-8de8-4c30eda360b1",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by as400-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5539c653-b534-55e2-81f0-e34eee2d8746",
+        "type": "software",
+        "title": "sap-bridge-mcp",
+        "description": "sap-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "805b5e90-5621-5e80-b1ee-e4e7b9c3ab43",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by sap-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "4ab16243-2bbd-5512-85e4-e226277ada65",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by sap-bridge-mcp."
+              },
+              {
+                "uuid": "d8cc49fe-d5bc-529b-b4ff-a67437ce5ad1",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by sap-bridge-mcp."
+              },
+              {
+                "uuid": "e56f462b-5f2a-5211-9cfa-9cb65373f3d5",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by sap-bridge-mcp."
+              },
+              {
+                "uuid": "bf74b928-1e51-51a9-ba1f-b400c35b5f41",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by sap-bridge-mcp."
+              },
+              {
+                "uuid": "d24376db-450d-5bd1-afdf-d5aa90bcc867",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by sap-bridge-mcp."
+              },
+              {
+                "uuid": "15bb48f3-aef4-5083-8407-1f0e753e4f16",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by sap-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "bf2f519b-e8a6-568d-8fc2-4533f45ef10e",
+        "type": "software",
+        "title": "oracle-bridge-mcp",
+        "description": "oracle-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "608e9e2d-b037-5821-8681-2535552c642e",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by oracle-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "c7290605-ccbd-503a-a938-ca47c5d17391",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by oracle-bridge-mcp."
+              },
+              {
+                "uuid": "448d11f3-1c2e-592d-851f-dcfaaac35572",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by oracle-bridge-mcp."
+              },
+              {
+                "uuid": "5422041c-5bda-5624-b84b-4d42d583aad3",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by oracle-bridge-mcp."
+              },
+              {
+                "uuid": "96a91acc-4468-50dc-971c-4869c82a8eb9",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by oracle-bridge-mcp."
+              },
+              {
+                "uuid": "7be1d488-351e-5795-9633-dcc7e522e491",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by oracle-bridge-mcp."
+              },
+              {
+                "uuid": "20aa2d9c-1db9-5a33-b981-8cfa79b05870",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by oracle-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5ed9d50a-6e63-524b-9e96-0352a9228bc8",
+        "type": "software",
+        "title": "scada-bridge-mcp",
+        "description": "scada-bridge-mcp \u2014 CSOAI Layer-0 component governing: IEC 62443, NIS2.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "IEC 62443, NIS2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "103c96eb-8d60-5348-abd6-38fa2228bc26",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by scada-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "008604a0-f924-5d74-b82e-3e0aad82953a",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by scada-bridge-mcp."
+              },
+              {
+                "uuid": "df941e46-f17c-5861-961e-4ffb6280c01b",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by scada-bridge-mcp."
+              },
+              {
+                "uuid": "1c93ffee-e34d-5951-af1c-7e9bb1bd6d9b",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by scada-bridge-mcp."
+              },
+              {
+                "uuid": "17d26639-f402-556e-adca-846e1cafc189",
+                "control-id": "sc-7",
+                "description": "SC-7 satisfied + attested by scada-bridge-mcp."
+              },
+              {
+                "uuid": "e64a5b2c-6c1a-5879-9c28-cceca0bc4bbf",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by scada-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "7bcd6466-f685-57b5-a58b-e82c77559661",
+        "type": "software",
+        "title": "edi-bridge-mcp",
+        "description": "edi-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "e5cf892c-0484-5232-8829-67e77aa0a4c0",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by edi-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "a88f8613-5f33-51c8-91be-52bd4c50f8ef",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by edi-bridge-mcp."
+              },
+              {
+                "uuid": "95d028cf-0887-5a83-bba0-50a17a490cd0",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by edi-bridge-mcp."
+              },
+              {
+                "uuid": "cc607eeb-c3c5-52dc-b299-9b9ecfeffecb",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by edi-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5d19df50-a08d-5139-b209-ba1b7031f149",
+        "type": "software",
+        "title": "fix-bridge-mcp",
+        "description": "fix-bridge-mcp \u2014 CSOAI Layer-0 component governing: MiFID II.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "MiFID II"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "50af1bb1-b143-5098-bc54-fcd0f1d23547",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by fix-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "bbe1920c-a31a-57d1-a8e1-6d413609e29b",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by fix-bridge-mcp."
+              },
+              {
+                "uuid": "54366f7a-a9c4-55d8-a68a-b36454aacf56",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by fix-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5229221b-c4cb-5a5d-910d-b3b00c10d80c",
+        "type": "software",
+        "title": "cics-bridge-mcp",
+        "description": "cics-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX, PCI-DSS, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX, PCI-DSS, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "d2584f1d-2568-59da-ae34-cb5c00ad44c8",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by cics-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f70b0365-c02e-5372-bd0f-42184f7650b9",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "70a740a0-6eb1-52a3-b351-334f107027ba",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "9c77a3c5-a10e-5f81-8015-1c6a6030d47e",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "efd7ebd7-cea1-5d96-a999-d5f6aa041bb9",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "10589b94-ab24-5385-9c1c-6ea5898a0434",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "674f9f76-a59f-5d52-84ab-a1490a8b82be",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "7d87ecfa-cd84-5cf4-8193-9c15215751e0",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by cics-bridge-mcp."
+              },
+              {
+                "uuid": "a2422676-780f-5e39-8099-9c3c9d74b6f4",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by cics-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "50495b95-ce46-5a1c-b432-c643919d7c14",
+        "type": "software",
+        "title": "mqtt-bridge-mcp",
+        "description": "mqtt-bridge-mcp \u2014 CSOAI Layer-0 component governing: IEC 62443, NIS2.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "IEC 62443, NIS2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "62d16e78-909e-5cb2-ab5a-9209730aaeb6",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by mqtt-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "11ad98c7-64ac-5f71-b8b5-9e8a2492b2bf",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by mqtt-bridge-mcp."
+              },
+              {
+                "uuid": "dfc2ca35-c6bc-5f95-a91b-afbca0f193f2",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by mqtt-bridge-mcp."
+              },
+              {
+                "uuid": "867a49c8-bd16-55a9-83d4-430ac8bf4ca4",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by mqtt-bridge-mcp."
+              },
+              {
+                "uuid": "5f2bd3c7-3b79-5883-817c-260c5639f3d8",
+                "control-id": "sc-7",
+                "description": "SC-7 satisfied + attested by mqtt-bridge-mcp."
+              },
+              {
+                "uuid": "a5040293-e7b4-592c-b12f-3d77cca32a39",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by mqtt-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "e349d35f-2087-5f04-b371-fcf19606f504",
+        "type": "software",
+        "title": "acord-bridge-mcp",
+        "description": "acord-bridge-mcp \u2014 CSOAI Layer-0 component governing: Solvency II, GDPR, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "Solvency II, GDPR, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f9d884ef-ae60-5dd5-9985-ff0b4ac191cd",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by acord-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "4576d018-bc71-567f-b1d1-442b665d9b13",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by acord-bridge-mcp."
+              },
+              {
+                "uuid": "e244120e-4c86-5146-b2b5-498c8d984fe7",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by acord-bridge-mcp."
+              },
+              {
+                "uuid": "16beae04-ce4a-5ba9-8929-0beb1d6ee62c",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by acord-bridge-mcp."
+              },
+              {
+                "uuid": "e8556dbc-b693-5e0e-a8d7-4c41d0e17ecf",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by acord-bridge-mcp."
+              },
+              {
+                "uuid": "a6e9cc27-7f1a-58aa-84d4-34c12c3bc4b7",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by acord-bridge-mcp."
+              },
+              {
+                "uuid": "5948335f-2732-50c9-986b-89a11f6622e8",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by acord-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "258eeddd-512a-5b63-9553-7688d0b0e25f",
+        "type": "software",
+        "title": "nacha-bridge-mcp",
+        "description": "nacha-bridge-mcp \u2014 CSOAI Layer-0 component governing: OFAC, AML.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "OFAC, AML"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "19377235-b663-55e1-8bcd-6ccdebb04ab7",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by nacha-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "848ab6e1-ffc8-5fc2-8aa5-5bec24d525ee",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by nacha-bridge-mcp."
+              },
+              {
+                "uuid": "ad7743f7-4e3f-5557-ba9f-6bcdb289f6ee",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by nacha-bridge-mcp."
+              },
+              {
+                "uuid": "66536263-cadb-5347-8d59-a150bf8971cb",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by nacha-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "67eebaa8-587c-5091-a75e-2a9f865a0b99",
+        "type": "software",
+        "title": "iso8583-bridge-mcp",
+        "description": "iso8583-bridge-mcp \u2014 CSOAI Layer-0 component governing: PCI-DSS, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "PCI-DSS, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "3b7876ad-cd1c-5c37-91f7-418367e0a24c",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by iso8583-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "14eced3d-b577-5968-b9e0-918eaa67a5b9",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by iso8583-bridge-mcp."
+              },
+              {
+                "uuid": "e866d2f3-93c5-583a-ab59-bdfe06a2c1b5",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by iso8583-bridge-mcp."
+              },
+              {
+                "uuid": "ac7a1169-d309-5fb8-80b5-ce789d6b4591",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by iso8583-bridge-mcp."
+              },
+              {
+                "uuid": "2d614056-240e-51b3-9133-ce487d7b60e3",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by iso8583-bridge-mcp."
+              },
+              {
+                "uuid": "efe9e3e2-86c4-58f1-9cee-b45670e990e8",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by iso8583-bridge-mcp."
+              },
+              {
+                "uuid": "26387e42-ccf0-5d46-9199-a7631f46c3d0",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by iso8583-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "b58f3c92-1678-58d6-a683-d66208c3b0e6",
+        "type": "software",
+        "title": "sip-bridge-mcp",
+        "description": "sip-bridge-mcp \u2014 CSOAI Layer-0 component governing: STIR/SHAKEN, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "STIR/SHAKEN, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "baa1018d-b104-52cb-8e81-ab08c20672d1",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by sip-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "a7c37ade-2273-5837-be71-87a9b87f4da2",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by sip-bridge-mcp."
+              },
+              {
+                "uuid": "1d9863cc-5a2e-52c5-9c9d-2815edf642c5",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by sip-bridge-mcp."
+              },
+              {
+                "uuid": "281a0769-8ed3-51fa-b2b4-e0e7679e876f",
+                "control-id": "ia-2",
+                "description": "IA-2 satisfied + attested by sip-bridge-mcp."
+              },
+              {
+                "uuid": "5c5ab3cc-592b-5aac-a894-6bf143896a63",
+                "control-id": "sc-8",
+                "description": "SC-8 satisfied + attested by sip-bridge-mcp."
+              },
+              {
+                "uuid": "d6fcf507-8db9-5bb9-a494-36332546caab",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by sip-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ee02dd68-7e01-5252-83bb-c5259a77ab38",
+        "type": "software",
+        "title": "tax-bridge-mcp",
+        "description": "tax-bridge-mcp \u2014 CSOAI Layer-0 component governing: SOX.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "SOX"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0dc10f14-2f33-518f-bdfc-69b43dbc2ca5",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by tax-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "523f7e99-1efa-523d-8be5-4a24c822968c",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by tax-bridge-mcp."
+              },
+              {
+                "uuid": "a9f74085-b0df-50d0-a749-31be64398f9a",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by tax-bridge-mcp."
+              },
+              {
+                "uuid": "f0ca0a7c-de24-5527-88ca-ab38e17ac911",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by tax-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "7bc835c7-09b2-5a57-9e49-3ec56695a0f0",
+        "type": "software",
+        "title": "gs1-bridge-mcp",
+        "description": "gs1-bridge-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "ed87c4d7-9926-5257-b1fd-559c393beda9",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by gs1-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "b82ba968-3e18-5eac-94c6-231c4e301dfa",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by gs1-bridge-mcp."
+              },
+              {
+                "uuid": "143602f6-9dad-5e66-9eb5-99df6aa85857",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by gs1-bridge-mcp."
+              },
+              {
+                "uuid": "1dfe0285-f9d7-53f6-bf9c-7f611698e265",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by gs1-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ae4babe6-7b3c-5431-ae4e-bb6819b551bb",
+        "type": "software",
+        "title": "mismo-bridge-mcp",
+        "description": "mismo-bridge-mcp \u2014 CSOAI Layer-0 component governing: ECOA, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "ECOA, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "d388dbe0-33b1-50d6-9288-3d5d8e92b8f4",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by mismo-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "303e813e-d436-5116-ad12-d3f75f61f7ea",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by mismo-bridge-mcp."
+              },
+              {
+                "uuid": "2cbd9019-8fca-539f-b808-af9839919a98",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by mismo-bridge-mcp."
+              },
+              {
+                "uuid": "57ca4b77-7485-5cff-8931-ac9fee9a59e8",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by mismo-bridge-mcp."
+              },
+              {
+                "uuid": "3cd7a82b-0649-5fdc-a987-e52e1107dbb8",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by mismo-bridge-mcp."
+              },
+              {
+                "uuid": "a76f38b8-65a4-5bff-bdc4-ea36a2de6ddd",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by mismo-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "2f18abc8-c05d-5e21-a223-2e64e9a7192d",
+        "type": "software",
+        "title": "dlms-bridge-mcp",
+        "description": "dlms-bridge-mcp \u2014 CSOAI Layer-0 component governing: ISO 62056, NIS2, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "ISO 62056, NIS2, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "27d4d41a-8ab0-5e39-aaef-4c5e2f7e57af",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by dlms-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "1a2a7002-c6b4-5a1a-afce-6637a9a858ea",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "84021ec7-929d-5277-ad95-25735bb5a8f2",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "1e63250d-5ba0-55cb-8e73-3e231dc53db9",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "fdbdc3e0-aaff-5c2d-aa08-052af03657a9",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "9f199d0f-6b57-51bc-bd6a-4d16bea7d292",
+                "control-id": "sc-7",
+                "description": "SC-7 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "178a4146-f220-55b4-b768-fb0f3e44cd50",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by dlms-bridge-mcp."
+              },
+              {
+                "uuid": "4e232901-43db-564a-b70a-5029a39b6ff2",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by dlms-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ec292514-510d-52cf-82c8-dd7984b60311",
+        "type": "software",
+        "title": "model-scoreboard-mcp",
+        "description": "model-scoreboard-mcp \u2014 CSOAI Layer-0 component governing: NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "14bc18c5-bb63-5c7b-9e21-f07ec9a68b06",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by model-scoreboard-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "bfce9ae8-c91c-5bf4-8965-58f4936a93e5",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by model-scoreboard-mcp."
+              },
+              {
+                "uuid": "22ef7591-f900-5c50-bc3b-8de047c68f13",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by model-scoreboard-mcp."
+              },
+              {
+                "uuid": "f82384cc-ec4d-5454-b36e-5b4f13a16d72",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by model-scoreboard-mcp."
+              },
+              {
+                "uuid": "68a17c2e-13b9-5da2-a7f8-0460b2f08697",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by model-scoreboard-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "b8c11c88-da23-5bb0-983f-06c8ba92605c",
+        "type": "software",
+        "title": "oscal-generator-mcp",
+        "description": "oscal-generator-mcp \u2014 CSOAI Layer-0 component governing: NIST, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "9ec15492-e6c2-5443-949e-74057f7994d3",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by oscal-generator-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "46f5e419-4df7-51e9-86e9-83054b8f5719",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by oscal-generator-mcp."
+              },
+              {
+                "uuid": "23f5b163-88eb-560b-bc85-3dae39a18424",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by oscal-generator-mcp."
+              },
+              {
+                "uuid": "f9834cf0-c13e-5755-93af-28396caf799b",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by oscal-generator-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "ff29780d-a817-5592-af7f-278cfa50ed4e",
+        "type": "software",
+        "title": "meok-compliance-passport-mcp",
+        "description": "meok-compliance-passport-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "75048a53-06f5-5a70-b6dc-ff5b0230af37",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-compliance-passport-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "9efef749-4bac-510b-aada-0177566548db",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by meok-compliance-passport-mcp."
+              },
+              {
+                "uuid": "9f7c55bb-e48b-5a6c-a3c0-178b337d5bf6",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by meok-compliance-passport-mcp."
+              },
+              {
+                "uuid": "3503140f-0f36-5e21-97f1-a71d47a748c6",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-compliance-passport-mcp."
+              },
+              {
+                "uuid": "a8b272c1-7041-5048-b671-804d5babc30c",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by meok-compliance-passport-mcp."
+              },
+              {
+                "uuid": "68c0fc6c-ff6c-5c76-a9f1-6fb3693eb601",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by meok-compliance-passport-mcp."
+              },
+              {
+                "uuid": "e8b8f454-51f7-5fe7-8a84-355f4d5eb433",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-compliance-passport-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "34dcb15a-a234-53d0-82f6-93cebf08d8a4",
+        "type": "software",
+        "title": "meok-compliance-gateway",
+        "description": "meok-compliance-gateway \u2014 CSOAI Layer-0 component governing: EU AI Act, GDPR, NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, GDPR, NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "1fa07ada-183b-5995-ad13-128bc9f23dc3",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-compliance-gateway.",
+            "implemented-requirements": [
+              {
+                "uuid": "62263070-0bd9-5d63-9497-54eb380c8374",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "dfb5c018-d107-5c31-8cfd-f038bb4b62b2",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "ff397ea3-918e-5e08-9fce-67a6ad5ed026",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "f3254976-4aea-539a-989d-a5db5661289b",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "ad6d06a3-d14e-5bd9-814b-2d37e305ae5c",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "dd9a87fd-46cd-5aef-9807-06b5ecae16b7",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by meok-compliance-gateway."
+              },
+              {
+                "uuid": "450ea6e6-7468-5a5d-8464-82857f1733ff",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-compliance-gateway."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
