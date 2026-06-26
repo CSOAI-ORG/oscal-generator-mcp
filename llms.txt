@@ -1,0 +1,36 @@
+# cobol-bridge-mcp
+# AI-assisted COBOL → modern stack bridge. Parse COBOL programs, map to Python/Java/Go, generate test harnesses, plan migration. For banks, insurers, and government legacy mainframes.
+
+## Install
+```bash
+pip install cobol-bridge-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label + on-premise.
+
+## Tools (5)
+
+### `parse_cobol_program(query, api_key)`
+Parse COBOL source — extract paragraphs, divisions, file IO
+
+### `identify_business_rules(query, api_key)`
+Extract business rules from procedure division logic
+
+### `plan_migration(query, api_key)`
+Generate phased migration plan COBOL → target stack
+
+### `generate_test_harness(query, api_key)`
+Generate equivalence test harness for parallel run
+
+### `estimate_complexity(query, api_key)`
+Estimate migration effort (cyclomatic complexity + IO surfaces)
+
+## Pairs with
+- `meok-attestation-api` — HMAC signing for compliance certs
+- `meok-attestation-verify` — public verification
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT

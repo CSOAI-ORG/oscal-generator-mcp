@@ -1,0 +1,242 @@
+{
+ "system-security-plan": {
+  "uuid": "c8fc0a9f-f1fa-5f90-b97a-4aa2c07c9447",
+  "metadata": {
+   "title": "dlms-bridge-mcp \u2014 System Security Plan",
+   "last-modified": "1970-01-01T00:00:00Z",
+   "version": "1.0.0",
+   "oscal-version": "1.1.2",
+   "roles": [
+    {
+     "id": "system-owner",
+     "title": "System Owner"
+    },
+    {
+     "id": "authorizing-official",
+     "title": "Authorizing Official"
+    }
+   ],
+   "parties": [
+    {
+     "uuid": "86fff82d-3d3d-5839-9334-d0a713136dba",
+     "type": "organization",
+     "name": "CSOAI-governed system owner"
+    }
+   ]
+  },
+  "import-profile": {
+   "href": "#baseline-moderate"
+  },
+  "system-characteristics": {
+   "system-name": "dlms-bridge-mcp",
+   "security-sensitivity-level": "moderate",
+   "system-information": {
+    "information-types": [
+     {
+      "uuid": "fc6e9d25-9846-5a49-8a02-1b8591c34fee",
+      "title": "System information",
+      "confidentiality-impact": {
+       "base": "moderate"
+      },
+      "integrity-impact": {
+       "base": "moderate"
+      },
+      "availability-impact": {
+       "base": "moderate"
+      }
+     }
+    ]
+   },
+   "status": {
+    "state": "operational"
+   }
+  },
+  "system-implementation": {
+   "components": [
+    {
+     "uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+     "type": "this-system",
+     "title": "dlms-bridge-mcp",
+     "status": {
+      "state": "operational"
+     }
+    }
+   ]
+  },
+  "control-implementation": {
+   "description": "Control implementations for the named controls.",
+   "implemented-requirements": [
+    {
+     "uuid": "1d211ee3-a2e4-53e8-a15b-2ec5f8727d14",
+     "control-id": "ac-2",
+     "statements": [
+      {
+       "statement-id": "ac-2_smt",
+       "uuid": "e3d59c82-1cf8-57d1-8d2a-994d1b758079",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "f3989f40-5492-58d9-9a2a-2ae135aaef7c",
+         "description": "AC-2 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "a6abfcda-2fd6-5c9f-80ff-243f11e7d2df",
+     "control-id": "ac-3",
+     "statements": [
+      {
+       "statement-id": "ac-3_smt",
+       "uuid": "53b827d4-5f29-5ef8-82b2-daaa57dd8802",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "595c90a5-45bb-5206-84fb-f49c379e5006",
+         "description": "AC-3 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "fd9196a1-22bd-5fc7-9b75-d6f346531669",
+     "control-id": "au-2",
+     "statements": [
+      {
+       "statement-id": "au-2_smt",
+       "uuid": "09dabd2f-e6d1-502b-9e20-c4874db8173e",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "85b62120-d844-5571-8841-fd4dc2f1af39",
+         "description": "AU-2 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "515bfb0a-977a-5990-b4de-9b01ea2c58ef",
+     "control-id": "au-6",
+     "statements": [
+      {
+       "statement-id": "au-6_smt",
+       "uuid": "924353e2-c3bb-5e76-a183-23214fd8e6dc",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "985e60f7-cddf-5a96-a54b-b054ffc15634",
+         "description": "AU-6 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "1a1d5eab-a49a-551b-9038-5aa3811113fd",
+     "control-id": "ca-2",
+     "statements": [
+      {
+       "statement-id": "ca-2_smt",
+       "uuid": "85e3089a-0fff-51cc-9bc9-75f23367349f",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "8df8fc25-6350-5eba-a155-7bc7fd5c38e8",
+         "description": "CA-2 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "f017fc5b-1f41-5219-91d6-96041ab7b26f",
+     "control-id": "cm-2",
+     "statements": [
+      {
+       "statement-id": "cm-2_smt",
+       "uuid": "cf63cc46-a154-5fb7-a92c-93c98fa3a462",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "655c220f-d63f-566e-9ce4-2687424391f7",
+         "description": "CM-2 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "112045dc-d83e-5d0c-a693-ebebd2e08886",
+     "control-id": "ia-2",
+     "statements": [
+      {
+       "statement-id": "ia-2_smt",
+       "uuid": "435d30d8-1fe0-51e9-8406-2ff5ea821585",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "e561393c-1f82-5804-a06b-c463800ccef0",
+         "description": "IA-2 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "5275f748-d982-5e18-b81c-f129b2064fca",
+     "control-id": "ra-5",
+     "statements": [
+      {
+       "statement-id": "ra-5_smt",
+       "uuid": "9e2e65c5-ed81-5d7c-9b20-5b181d191ed2",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "a353e94c-e431-52ff-9e71-9210cb9ad153",
+         "description": "RA-5 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "08372f02-0e63-595e-98d6-41ba17761124",
+     "control-id": "sc-7",
+     "statements": [
+      {
+       "statement-id": "sc-7_smt",
+       "uuid": "a149641f-f665-5d6c-96d5-d286f9a8d92c",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "9f86b423-85e2-5a1b-9c4a-377717ed5e55",
+         "description": "SC-7 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "uuid": "873e4f13-7a6e-5087-adaf-f262528fa133",
+     "control-id": "si-4",
+     "statements": [
+      {
+       "statement-id": "si-4_smt",
+       "uuid": "2ffe0311-d761-5e9c-ac25-420fb5efebcf",
+       "by-components": [
+        {
+         "component-uuid": "156f1241-22ca-5ac6-a58b-4ce24d17f241",
+         "uuid": "8a63d7cf-669e-5839-9b32-b186d7054529",
+         "description": "SI-4 implemented and governed (CSOAI-attested)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
