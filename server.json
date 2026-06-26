@@ -1,0 +1,7 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.CSOAI-ORG/oscal-generator-mcp",
+  "description": "Generate machine-readable NIST OSCAL packages (SSP/component-definition) + FedRAMP RFC-0024 readiness, governed + signed.",
+  "version": "0.1.0",
+  "packages": [{"registryType": "pypi", "identifier": "oscal-generator-mcp", "version": "0.1.0", "runtimeHint": "python"}]
+}
