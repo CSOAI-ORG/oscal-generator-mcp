@@ -1,0 +1,2 @@
+[console_scripts]
+oscal-generator-mcp = server:main

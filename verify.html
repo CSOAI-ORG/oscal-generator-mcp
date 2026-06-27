@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify a CSOAI Signed Compliance Attestation</title>
+<meta name="description" content="Independently verify a CSOAI Ed25519-signed OSCAL compliance package — offline, in your browser, with no account. The EU AI Act Article-12 audit trail, cryptographically provable.">
+<style>
+  :root{
+    --bg:#0a0e1a; --panel:#111726; --line:#1e2740; --txt:#e8edf7; --muted:#8a97b2;
+    --accent:#3b82f6; --accent-light:#60a5fa; --success:#10b981; --danger:#ef4444; --warn:#f59e0b;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:Geist,Inter,system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 22px 80px}
+  .badge{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-light);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:18px}
+  h1{font-size:30px;line-height:1.2;margin:0 0 10px;font-weight:650}
+  .sub{color:var(--muted);font-size:16px;margin:0 0 28px;max-width:660px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  button{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 18px;font-size:15px;font-weight:600;cursor:pointer;transition:.15s}
+  button:hover{background:var(--accent-light)}
+  button.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+  .result{margin-top:18px;border-radius:12px;padding:18px;border:1px solid var(--line);display:none}
+  .result.show{display:block}
+  .result.ok{border-color:var(--success);background:rgba(16,185,129,.08)}
+  .result.bad{border-color:var(--danger);background:rgba(239,68,68,.08)}
+  .verdict{font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .verdict.ok{color:var(--success)} .verdict.bad{color:var(--danger)}
+  .kv{font-family:var(--mono);font-size:12.5px;color:var(--muted);word-break:break-all;margin:3px 0}
+  .kv b{color:var(--txt);font-weight:600}
+  textarea{width:100%;background:#0c1120;border:1px solid var(--line);border-radius:8px;color:var(--txt);font-family:var(--mono);font-size:12px;padding:10px;min-height:90px;resize:vertical}
+  label{display:block;font-size:13px;color:var(--muted);margin:12px 0 5px}
+  details{margin-top:14px} summary{cursor:pointer;color:var(--accent-light);font-size:14px}
+  .steps{color:var(--muted);font-size:14px;padding-left:18px}
+  .steps li{margin:6px 0}
+  a{color:var(--accent-light)}
+  .foot{color:var(--muted);font-size:13px;margin-top:34px;border-top:1px solid var(--line);padding-top:18px}
+  code{font-family:var(--mono);background:#0c1120;padding:2px 6px;border-radius:5px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">CSOAI · Layer-0 · Ed25519</span>
+  <h1>Verify a CSOAI signed compliance attestation</h1>
+  <p class="sub">Every CSOAI governance action emits a cryptographically signed, machine-readable OSCAL package — your <b>EU AI Act Article-12 audit trail</b>. This page verifies that signature <b>entirely in your browser, offline, with no account and no callback to us.</b> If it's green, the package is authentic and unmodified. That's the proof a vendor "trust me" dashboard can't give you.</p>
+
+  <div class="card">
+    <div class="row">
+      <button id="verifyLive">▶ Verify the live Layer-0 protocol package</button>
+      <button class="ghost" id="tamper">Try tampering (prove it catches it)</button>
+    </div>
+    <div class="kv" id="loadInfo" style="margin-top:12px">Loads <code>layer0_protocol.oscal.json</code> + its detached <code>.sig.json</code> from this repository and checks the Ed25519 signature over the canonical JSON.</div>
+    <div class="result" id="liveResult"></div>
+  </div>
+
+  <details>
+    <summary>Verify your own document + signature (paste)</summary>
+    <div class="card">
+      <label>OSCAL document (JSON)</label>
+      <textarea id="docIn" placeholder='{"component-definition": { ... }}'></textarea>
+      <label>Signature (hex)</label>
+      <textarea id="sigIn" style="min-height:50px" placeholder="ed25519 signature, hex"></textarea>
+      <label>Public key (hex, 32 bytes raw)</label>
+      <textarea id="pubIn" style="min-height:50px" placeholder="raw ed25519 public key, hex"></textarea>
+      <div class="row" style="margin-top:12px"><button id="verifyPaste">Verify pasted</button></div>
+      <div class="result" id="pasteResult"></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>How this works (so you can trust it, not us)</summary>
+    <ol class="steps">
+      <li>We canonicalise the JSON exactly as it was signed: keys sorted, no whitespace, UTF-8 (<code>json.dumps(sort_keys=True, separators=(",",":"), ensure_ascii=False)</code>).</li>
+      <li>Your browser's native <code>WebCrypto</code> Ed25519 implementation verifies the signature over those canonical bytes against the public key.</li>
+      <li>Nothing is sent anywhere — open dev-tools → Network and watch: zero outbound calls during verification.</li>
+      <li>The same scheme signs the CSOAI Compliance Passport and every Layer-0 governed action (the SIGIL chain).</li>
+    </ol>
+  </details>
+
+  <div class="foot">
+    CSOAI — the signed bridge between AI and the legacy economy. Offline-verifiable compliance for the EU AI Act (Art. 12), DORA, NIS2, HIPAA and the legacy systems that run regulated industries.
+    <br>Signature scheme: Ed25519 (RFC 8032) · OSCAL 1.1.2 (NIST) · validated under <a href="https://github.com/oscal-compass/compliance-trestle">compliance-trestle</a>.
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+// Canonical JSON — must reproduce Python json.dumps(sort_keys=True, separators=(",",":"), ensure_ascii=False)
+// All OSCAL keys are ASCII, so JS UTF-16 key sort == Python code-point sort. Values are strings/objects/arrays.
+function canon(v){
+  if (v === null) return 'null';
+  if (Array.isArray(v)) return '[' + v.map(canon).join(',') + ']';
+  if (typeof v === 'object') {
+    const keys = Object.keys(v).sort();
+    return '{' + keys.map(k => JSON.stringify(k) + ':' + canon(v[k])).join(',') + '}';
+  }
+  return JSON.stringify(v); // strings, numbers, booleans — JSON.stringify matches Python escaping for our data
+}
+const hexToBytes = h => { h = (h||'').trim().replace(/\s+/g,''); const a = new Uint8Array(h.length/2); for (let i=0;i<a.length;i++) a[i]=parseInt(h.substr(i*2,2),16); return a; };
+const enc = new TextEncoder();
+
+async function sha256hex(bytes){
+  const d = await crypto.subtle.digest('SHA-256', bytes);
+  return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+async function verify(doc, sigHex, pubHex){
+  if (!(crypto.subtle && crypto.subtle.importKey)) throw new Error('WebCrypto unavailable');
+  const data = enc.encode(canon(doc));
+  let key;
+  try {
+    key = await crypto.subtle.importKey('raw', hexToBytes(pubHex), {name:'Ed25519'}, false, ['verify']);
+  } catch(e){ throw new Error('This browser lacks native Ed25519 in WebCrypto (need Chrome 137+, Safari 17+, or Firefox 129+).'); }
+  const ok = await crypto.subtle.verify({name:'Ed25519'}, key, hexToBytes(sigHex), data);
+  const sha = await sha256hex(data);
+  return {ok, sha};
+}
+
+function render(el, res, sig){
+  const cls = res.ok ? 'ok' : 'bad';
+  el.className = 'result show ' + cls;
+  el.innerHTML =
+    `<div class="verdict ${cls}">${res.ok ? '✓ VERIFIED — authentic & unmodified' : '✗ INVALID — signature does not match'}</div>` +
+    (res.shaMatch === false ? `<div class="kv" style="color:var(--warn)"><b>⚠ canonical SHA-256 differs from the sidecar</b></div>` : '') +
+    `<div class="kv"><b>algorithm:</b> Ed25519 (RFC 8032), verified in-browser via WebCrypto</div>` +
+    `<div class="kv"><b>canonical SHA-256:</b> ${res.sha}</div>` +
+    (sig ? `<div class="kv"><b>signature:</b> ${sig.slice(0,48)}…</div>` : '') +
+    `<div class="kv" style="color:var(--muted)">No network calls were made — this verdict is computed entirely on your device.</div>`;
+}
+
+function renderErr(el, msg){ el.className='result show bad'; el.innerHTML = `<div class="verdict bad">⚠ ${msg}</div>`; }
+
+let LIVE = null; // {doc, sig, pub, sha}
+async function loadLive(){
+  if (LIVE) return LIVE;
+  const [doc, sig] = await Promise.all([
+    fetch('layer0_protocol.oscal.json').then(r=>{ if(!r.ok) throw new Error('could not load package'); return r.json(); }),
+    fetch('layer0_protocol.oscal.sig.json').then(r=>{ if(!r.ok) throw new Error('could not load signature'); return r.json(); })
+  ]);
+  LIVE = {doc, sig: sig.signature, pub: sig.public_key, sha: sig.canonical_sha256};
+  return LIVE;
+}
+
+$('verifyLive').onclick = async () => {
+  const el = $('liveResult'); el.className='result show'; el.innerHTML = '<div class="kv">verifying…</div>';
+  try {
+    const L = await loadLive();
+    const res = await verify(L.doc, L.sig, L.pub);
+    res.shaMatch = (L.sha ? res.sha === L.sha : undefined);
+    render(el, res, L.sig);
+  } catch(e){ renderErr(el, e.message); }
+};
+
+$('tamper').onclick = async () => {
+  const el = $('liveResult'); el.className='result show'; el.innerHTML = '<div class="kv">tampering with one byte, then verifying…</div>';
+  try {
+    const L = await loadLive();
+    const clone = JSON.parse(JSON.stringify(L.doc));
+    // flip the protocol title — any change must break the signature
+    const cd = clone['component-definition'];
+    if (cd && cd.metadata) cd.metadata.title = (cd.metadata.title||'') + ' [TAMPERED]';
+    const res = await verify(clone, L.sig, L.pub);
+    el.className = 'result show ' + (res.ok ? 'bad' : 'ok');
+    el.innerHTML = `<div class="verdict ${res.ok?'bad':'ok'}">${res.ok ? '✗ unexpected: tamper not caught' : '✓ Correctly REJECTED the tampered package'}</div>` +
+      `<div class="kv">Changed one character in the title → signature no longer matches. That's the guarantee: any modification is detectable, offline.</div>`;
+  } catch(e){ renderErr(el, e.message); }
+};
+
+$('verifyPaste').onclick = async () => {
+  const el = $('pasteResult'); el.className='result show'; el.innerHTML='<div class="kv">verifying…</div>';
+  try {
+    const doc = JSON.parse($('docIn').value);
+    const res = await verify(doc, $('sigIn').value, $('pubIn').value);
+    render(el, res, $('sigIn').value.trim());
+  } catch(e){ renderErr(el, 'Could not verify: ' + e.message); }
+};
+</script>
+</body>
+</html>

@@ -1941,6 +1941,47 @@
         ]
       },
       {
+        "uuid": "f50a298d-2ae8-5f62-905b-3f7f183b540a",
+        "type": "software",
+        "title": "bft-progress-council-mcp",
+        "description": "bft-progress-council-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f973081a-7bc6-5c55-acbc-cf59c42f29a3",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by bft-progress-council-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "3faa8155-d175-5064-be1d-68e2ce54fb2e",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by bft-progress-council-mcp."
+              },
+              {
+                "uuid": "55df0d0e-4d19-505b-9257-b90c84c3519a",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by bft-progress-council-mcp."
+              },
+              {
+                "uuid": "b0fb584e-236a-56fd-b1c0-d730352284c3",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by bft-progress-council-mcp."
+              },
+              {
+                "uuid": "2e67a0dd-f2c1-5d6b-ae17-96c1a72d27e8",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by bft-progress-council-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
         "uuid": "02efb8b5-0b19-5a2a-8800-81db5ea06e27",
         "type": "software",
         "title": "eu-ai-act-compliance-mcp",
@@ -2305,6 +2346,959 @@
                 "uuid": "f664fdfe-8c04-57ea-a559-61fa81d97a42",
                 "control-id": "si-4",
                 "description": "SI-4 satisfied + attested by soc2-compliance-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "2eaf9d73-b56c-54ff-ba04-5977b893c842",
+        "type": "software",
+        "title": "iso-42001-ai-mcp",
+        "description": "iso-42001-ai-mcp \u2014 CSOAI Layer-0 component governing: ISO 42001, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "ISO 42001, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "ffe025ec-57f5-5451-9665-b9c875fb05a5",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by iso-42001-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "0f241732-9ca7-50f7-80b0-ec2bb0ae5640",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by iso-42001-ai-mcp."
+              },
+              {
+                "uuid": "17acf20f-0f4e-534f-af92-cbca2d846f93",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by iso-42001-ai-mcp."
+              },
+              {
+                "uuid": "b2c9b75c-eb15-57bc-8a64-72f2bd0ed3a3",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by iso-42001-ai-mcp."
+              },
+              {
+                "uuid": "aefe5e84-edb9-58c3-8666-02b168d69787",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by iso-42001-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "88387e05-63fa-559e-9817-faa3829a5a9e",
+        "type": "software",
+        "title": "nist-rmf-ai-mcp",
+        "description": "nist-rmf-ai-mcp \u2014 CSOAI Layer-0 component governing: NIST, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIST, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f716d9e1-8c8a-5785-a6f3-8ec8b60b4549",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by nist-rmf-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f563f5be-6654-534a-89e7-1d2a80a0f464",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by nist-rmf-ai-mcp."
+              },
+              {
+                "uuid": "8ba6ea1e-dbc8-5d9b-881a-a69161c04459",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by nist-rmf-ai-mcp."
+              },
+              {
+                "uuid": "228bd409-f947-5b0f-8831-61fac4e448bd",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by nist-rmf-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "e86a0f3c-7b8f-530f-b048-e8c086b75c6f",
+        "type": "software",
+        "title": "meok-eu-ai-act-art-26-fria-mcp",
+        "description": "meok-eu-ai-act-art-26-fria-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act Art.26 (FRIA).",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act Art.26 (FRIA)"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f6d220db-75f6-51eb-9ddf-f409c12c05bd",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-eu-ai-act-art-26-fria-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "32039a75-be8d-58c0-a3c9-44f9a208ccdc",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-eu-ai-act-art-26-fria-mcp."
+              },
+              {
+                "uuid": "f555df6f-ca83-5b95-95dd-65c5034acd3f",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by meok-eu-ai-act-art-26-fria-mcp."
+              },
+              {
+                "uuid": "be7a83c5-9b30-5ec3-ad05-8ec027f2d785",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-eu-ai-act-art-26-fria-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "796e0a23-8bab-5507-90b5-8e3eaa2be17d",
+        "type": "software",
+        "title": "meok-eu-ai-act-art-13-ifu-mcp",
+        "description": "meok-eu-ai-act-art-13-ifu-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act Art.13 (IFU).",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act Art.13 (IFU)"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "710d7f0e-4eae-5cc5-81f7-6faf8a2e5858",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-eu-ai-act-art-13-ifu-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "8650c420-3466-592c-bf72-d567506bdfb3",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-eu-ai-act-art-13-ifu-mcp."
+              },
+              {
+                "uuid": "0abc12d0-9079-501c-9809-c0710aa088df",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by meok-eu-ai-act-art-13-ifu-mcp."
+              },
+              {
+                "uuid": "70448e83-39c4-5caf-99da-5eb797468724",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-eu-ai-act-art-13-ifu-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "6490181a-7abd-5f8a-8e12-3c0cba513bb8",
+        "type": "software",
+        "title": "meok-cra-annex-iv-classifier-mcp",
+        "description": "meok-cra-annex-iv-classifier-mcp \u2014 CSOAI Layer-0 component governing: EU CRA Annex IV.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU CRA Annex IV"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "faf3199f-1577-52c0-8054-8d77e9ba681b",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-cra-annex-iv-classifier-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "a8b9ed43-7f52-50de-ad5a-b88f6173552a",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-cra-annex-iv-classifier-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "92b73fbc-81d4-57ec-a1b6-fb2b12330000",
+        "type": "software",
+        "title": "meok-cra-art14-reporter-mcp",
+        "description": "meok-cra-art14-reporter-mcp \u2014 CSOAI Layer-0 component governing: EU CRA Art.14.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU CRA Art.14"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "dbd5938f-726a-5b5c-9ce3-48fffb1863f5",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-cra-art14-reporter-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "2080b95c-beee-57c7-91d8-1e7d09147aef",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-cra-art14-reporter-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "b63d7a6c-02e5-523e-8003-de692da23bc0",
+        "type": "software",
+        "title": "meok-dora-tlpt-planner-mcp",
+        "description": "meok-dora-tlpt-planner-mcp \u2014 CSOAI Layer-0 component governing: DORA Art.26 (TLPT).",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "DORA Art.26 (TLPT)"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "26878c5b-ca22-5159-87a1-42937b1fb5a7",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-dora-tlpt-planner-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "83a8cc2e-2ee1-5a9c-a492-384958088e36",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by meok-dora-tlpt-planner-mcp."
+              },
+              {
+                "uuid": "a08292db-8cfc-561a-9266-962813bed06d",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-dora-tlpt-planner-mcp."
+              },
+              {
+                "uuid": "882d4024-b3ce-5f41-88b5-decd446c35a8",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-dora-tlpt-planner-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "be9f9910-f974-5667-9ed4-f2dc073a7017",
+        "type": "software",
+        "title": "meok-nis2-de-register-mcp",
+        "description": "meok-nis2-de-register-mcp \u2014 CSOAI Layer-0 component governing: NIS2 (DE).",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIS2 (DE)"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "7afd77c8-b382-59f9-afae-8eb7974a6023",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-nis2-de-register-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "d0f30e7f-d4dc-513c-833b-46832b1cb8b6",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-nis2-de-register-mcp."
+              },
+              {
+                "uuid": "8ff3f846-64c7-5094-a7f8-7961c580ad99",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-nis2-de-register-mcp."
+              },
+              {
+                "uuid": "6e7ab681-6053-5ab4-bf82-3f85b8919fb1",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-nis2-de-register-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "243ff5ad-1ad6-5d6b-9f35-ec17773d17cd",
+        "type": "software",
+        "title": "owasp-agentic-mcp",
+        "description": "owasp-agentic-mcp \u2014 CSOAI Layer-0 component governing: OWASP Agentic Top 10.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "OWASP Agentic Top 10"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "bf62759b-f732-59a9-af03-a63a189147f6",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by owasp-agentic-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "47d2927f-f1ec-525d-9aac-3dac3e57d9ea",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by owasp-agentic-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "796a2d28-d4a9-5460-9437-9b742d4d76ee",
+        "type": "software",
+        "title": "meok-governance-engine-mcp",
+        "description": "meok-governance-engine-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, GDPR, DORA, NIS2, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, GDPR, DORA, NIS2, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "3791ec07-be4c-5a91-b728-fd15a54f98e8",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-governance-engine-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f0694838-7f23-5a63-906f-ea6030e24106",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "59cfaca6-2ae0-5e45-a9b4-bdb1a012782f",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "81a25fdc-d22c-5c59-8492-03d7da9a3401",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "788476cd-50a2-5d4b-a746-4f1a546d12d3",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "781675d7-9fa2-5c25-ac13-f9c957a0179c",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "3863c1df-9757-599d-8a33-ebbf7160889c",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "b44ea9cc-fdb2-5cc2-a796-7b67c67a5cd4",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "58972f8b-3932-59a4-9946-e4e39a048ef3",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "19427dad-fa15-53a2-a0e4-e53e3b302f5b",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by meok-governance-engine-mcp."
+              },
+              {
+                "uuid": "f248bfe6-4548-5c22-ba89-9a891328b39a",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-governance-engine-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "98639ef7-d833-5d4e-a593-1e8dab28fdd9",
+        "type": "software",
+        "title": "csoai-governance-crosswalk-mcp",
+        "description": "csoai-governance-crosswalk-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, GDPR, DORA, NIS2, ISO 42001, NIST, HIPAA, SOX, PCI-DSS, MiFID II, Solvency II, CSRD, AML.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, GDPR, DORA, NIS2, ISO 42001, NIST, HIPAA, SOX, PCI-DSS, MiFID II, Solvency II, CSRD, AML"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "da6be02c-bed9-5617-9899-cb23ac46383e",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by csoai-governance-crosswalk-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "4ac8d984-430f-5f0b-ba9d-21b0d59ceecb",
+                "control-id": "ac-2",
+                "description": "AC-2 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "12548205-5678-54ba-8967-6433caafbbd7",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "2a063277-0e3c-5468-898f-3209b43d9408",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "f710e898-154b-5898-824b-c18cea5459e9",
+                "control-id": "au-6",
+                "description": "AU-6 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "5e3e8134-c02c-5b45-94b5-b9ff7425114c",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "d26b78f2-6b3f-50f0-913f-a20b2f7174da",
+                "control-id": "cm-2",
+                "description": "CM-2 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "edbf09c4-c23a-56b6-8c7a-4c0ee7b9b1f6",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "f9d95161-210e-5a8e-bd2b-b7d40efb6ef9",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "8120b6df-a001-51d5-96f1-d0500f8ad3da",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "a1d4649f-b6a3-5433-adb7-eb2277876c8b",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "7ff8188a-aadc-5dfd-8c30-0b68545edb4c",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "dff5e07c-a64f-503f-b564-a96ebe0091ab",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "4bfdc17c-5ffd-5c00-9922-aab259374ce3",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by csoai-governance-crosswalk-mcp."
+              },
+              {
+                "uuid": "b56be0c7-0ec1-58e5-b521-d3e9a391f77d",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by csoai-governance-crosswalk-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "f4d4ea25-0d9f-51db-bead-7594c6ea0c94",
+        "type": "software",
+        "title": "healthcare-ai-governance-mcp",
+        "description": "healthcare-ai-governance-mcp \u2014 CSOAI Layer-0 component governing: HIPAA, EU MDR, EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "HIPAA, EU MDR, EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "81d4e606-2a0f-55fe-8a4f-0f0a98bdad11",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by healthcare-ai-governance-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "e0da0d77-fbb3-5f86-9a53-66ddc90cb000",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by healthcare-ai-governance-mcp."
+              },
+              {
+                "uuid": "1804bc18-1e0a-5209-b29a-53bfd0961b38",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by healthcare-ai-governance-mcp."
+              },
+              {
+                "uuid": "ef154539-4d24-58ef-a009-e56cd727cb57",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by healthcare-ai-governance-mcp."
+              },
+              {
+                "uuid": "e4193ee2-c4f5-52fd-b30d-e13b3668eb35",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by healthcare-ai-governance-mcp."
+              },
+              {
+                "uuid": "564d9746-5e7f-5383-9393-9b8e422df850",
+                "control-id": "sc-13",
+                "description": "SC-13 satisfied + attested by healthcare-ai-governance-mcp."
+              },
+              {
+                "uuid": "687f0b4e-a40d-5691-ac02-451ba0162398",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by healthcare-ai-governance-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "8f74e7ab-060e-5b7d-8d01-23e6893a97c9",
+        "type": "software",
+        "title": "ai-bom-mcp",
+        "description": "ai-bom-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, NIST, ISO 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, NIST, ISO 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "ee4417a0-4470-5108-b67f-2b8d53e88eb9",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by ai-bom-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "882ce9c3-a6c5-56ce-a229-b2895ea4e264",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by ai-bom-mcp."
+              },
+              {
+                "uuid": "3475da3f-2388-5365-bf70-c3309d06664f",
+                "control-id": "pm-9",
+                "description": "PM-9 satisfied + attested by ai-bom-mcp."
+              },
+              {
+                "uuid": "2aba6738-b51e-5f3e-b9b1-f07f071482f8",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by ai-bom-mcp."
+              },
+              {
+                "uuid": "244fc283-c743-5dbf-a5f6-ee859e3251d8",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by ai-bom-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "f43b336e-66f6-5332-b8a3-3b1fe9dfa5bc",
+        "type": "software",
+        "title": "bias-detection-mcp",
+        "description": "bias-detection-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, ECOA, NYC LL144.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, ECOA, NYC LL144"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "54255292-94ed-57f3-906f-d0e73b1774f0",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by bias-detection-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "d24c7b87-23b8-5d32-8a4f-bcf044757a83",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by bias-detection-mcp."
+              },
+              {
+                "uuid": "4e714a84-4f97-5f98-a5d1-63c6183ba27e",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by bias-detection-mcp."
+              },
+              {
+                "uuid": "6ea04577-7f90-51ab-b45c-9e2d4fdc812b",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by bias-detection-mcp."
+              },
+              {
+                "uuid": "e24305b0-ee35-5e7b-a8e0-b647bdd2281e",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by bias-detection-mcp."
+              },
+              {
+                "uuid": "7144d3df-5d2f-5f69-b0e2-687a5779895e",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by bias-detection-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "a190d0d9-64cc-5d9d-9923-e416559c8798",
+        "type": "software",
+        "title": "care-membrane-mcp",
+        "description": "care-membrane-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "c218086c-ed92-55e4-9dce-ea8cb75d9d91",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by care-membrane-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "45b90d2e-dca3-5693-9a7c-f3af30fa5895",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by care-membrane-mcp."
+              },
+              {
+                "uuid": "cc380ab0-c928-5b7f-8347-da2b1dbffae7",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by care-membrane-mcp."
+              },
+              {
+                "uuid": "13264190-e500-5c48-a6b9-ae685a9357e9",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by care-membrane-mcp."
+              },
+              {
+                "uuid": "9dc4308e-3f5f-5c6e-8232-42a12aeaa727",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by care-membrane-mcp."
+              },
+              {
+                "uuid": "103c86dc-11f9-5116-bd28-5f6fdd6a6ac5",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by care-membrane-mcp."
+              },
+              {
+                "uuid": "a12f74aa-7833-5a4b-a857-2d7bd14bf70b",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by care-membrane-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "7f9fd4ad-62a8-5f59-b175-4c57019ee51e",
+        "type": "software",
+        "title": "c2pa-watermark-mcp",
+        "description": "c2pa-watermark-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act Art.50 (C2PA).",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act Art.50 (C2PA)"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "5cd4b0bf-fe83-5ff0-9d52-7794f324e32d",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by c2pa-watermark-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f5839b3e-d40f-510b-af46-24231185d030",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by c2pa-watermark-mcp."
+              },
+              {
+                "uuid": "adf60501-a365-5e1f-a99a-069474745498",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by c2pa-watermark-mcp."
+              },
+              {
+                "uuid": "d3d96fd7-4d7c-56e2-a236-5865da146a72",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by c2pa-watermark-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "45f5be50-0491-57ee-a8dc-e753d1965918",
+        "type": "software",
+        "title": "meok-coinbase-x402-receipt-mcp",
+        "description": "meok-coinbase-x402-receipt-mcp \u2014 CSOAI Layer-0 component governing: MiCA, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "MiCA, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f9dfdf90-2e15-5f39-ab39-da3c068d9bcc",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-coinbase-x402-receipt-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "e08f8df5-9171-5a54-ba84-24486fb8a7f6",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by meok-coinbase-x402-receipt-mcp."
+              },
+              {
+                "uuid": "0364d735-5362-5b33-9245-c8c92ee21848",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-coinbase-x402-receipt-mcp."
+              },
+              {
+                "uuid": "5896f8d9-94f1-516b-98fd-19283316abc7",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-coinbase-x402-receipt-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "3d7e75dd-bf29-50c5-a3ac-c03ecae70e5b",
+        "type": "software",
+        "title": "firmware-attestation-mcp",
+        "description": "firmware-attestation-mcp \u2014 CSOAI Layer-0 component governing: EU CRA, IEC 62443.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU CRA, IEC 62443"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "7baefabd-3b39-5145-be63-a5d652d06432",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by firmware-attestation-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "f2deb110-d010-5150-a7ba-772dd0e363a7",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by firmware-attestation-mcp."
+              },
+              {
+                "uuid": "6a553087-88ad-5978-8e9f-59aa54ee66af",
+                "control-id": "sc-7",
+                "description": "SC-7 satisfied + attested by firmware-attestation-mcp."
+              },
+              {
+                "uuid": "31cb1349-c00b-5066-99f4-fa79f5259990",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by firmware-attestation-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "72063818-aa64-5267-9886-cfdd05d20489",
+        "type": "software",
+        "title": "meok-abci-bridge-mcp",
+        "description": "meok-abci-bridge-mcp \u2014 CSOAI Layer-0 component governing: MiCA, DORA.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "MiCA, DORA"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "11e075ce-9279-52ce-8d21-0f5c17f57dea",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-abci-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "44cc5fc4-52db-5d49-adae-c6a78aaa159c",
+                "control-id": "cp-2",
+                "description": "CP-2 satisfied + attested by meok-abci-bridge-mcp."
+              },
+              {
+                "uuid": "5da25643-4f30-594b-9ebe-d1db9380a050",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-abci-bridge-mcp."
+              },
+              {
+                "uuid": "51f8d726-84c4-540f-827e-e352ba345ea7",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-abci-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "15aca9d2-ae28-5924-8c62-572825724e4b",
+        "type": "software",
+        "title": "a2a-governance-bridge-mcp",
+        "description": "a2a-governance-bridge-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "f79b6210-11ce-5649-938a-35217d3daa38",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by a2a-governance-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "74134074-ad1a-5268-95d9-b2eaae1e7afb",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by a2a-governance-bridge-mcp."
+              },
+              {
+                "uuid": "437aae7a-d2b6-5d00-aeca-35a3a95a78a9",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by a2a-governance-bridge-mcp."
+              },
+              {
+                "uuid": "c9458140-03be-52c6-855b-a12aa5b4da04",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by a2a-governance-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5a59d14a-e666-5ff6-9904-7cd1de065620",
+        "type": "software",
+        "title": "meok-haulage-governance-bridge-mcp",
+        "description": "meok-haulage-governance-bridge-mcp \u2014 CSOAI Layer-0 component governing: NIS2, GDPR.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "NIS2, GDPR"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "413958b8-c42a-5ef4-87af-afa567fbec91",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by meok-haulage-governance-bridge-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "b214fbf3-3d93-57d2-9c7a-b1ae666f6903",
+                "control-id": "ac-3",
+                "description": "AC-3 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              },
+              {
+                "uuid": "14cb2557-e370-5be9-ac08-9782ff53d085",
+                "control-id": "au-2",
+                "description": "AU-2 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              },
+              {
+                "uuid": "4933693c-e938-5d0c-93ec-4ac8e50e89b4",
+                "control-id": "ir-4",
+                "description": "IR-4 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              },
+              {
+                "uuid": "5c57be9d-2fdf-50cf-a1ae-c4ad3cb48014",
+                "control-id": "ra-5",
+                "description": "RA-5 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              },
+              {
+                "uuid": "7c7a3975-535f-56dd-813a-4913f027e628",
+                "control-id": "si-12",
+                "description": "SI-12 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              },
+              {
+                "uuid": "c3c4ee1a-7fc9-5be8-9aa5-2271aec05323",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by meok-haulage-governance-bridge-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "cccbd33d-84e3-5a8f-914b-062a97d0a20a",
+        "type": "software",
+        "title": "proofof-ai-mcp",
+        "description": "proofof-ai-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act, ISO/IEC 42001.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act, ISO/IEC 42001"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "0d4f4c2d-1c27-52db-9111-ac946a4eecc8",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by proofof-ai-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "bc652ea0-de9d-5b1d-86e6-ecbf1684693a",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by proofof-ai-mcp."
+              },
+              {
+                "uuid": "8ba1c5f1-d0a5-5327-a7f4-c708bb54336d",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by proofof-ai-mcp."
+              },
+              {
+                "uuid": "0535ceba-3ec6-51af-a6d4-486960108d25",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by proofof-ai-mcp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "5afb88a8-83cd-59c9-b672-064cd49504bf",
+        "type": "software",
+        "title": "consciousness-engine-mcp",
+        "description": "consciousness-engine-mcp \u2014 CSOAI Layer-0 component governing: EU AI Act.",
+        "props": [
+          {
+            "name": "frameworks",
+            "value": "EU AI Act"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "61f1d4bf-861e-53a5-ae5d-91ebdbc73aab",
+            "source": "#nist-800-53",
+            "description": "Controls satisfied by consciousness-engine-mcp.",
+            "implemented-requirements": [
+              {
+                "uuid": "55c7ad60-e549-5aa7-9d5c-3fdd1abbb7ad",
+                "control-id": "ca-2",
+                "description": "CA-2 satisfied + attested by consciousness-engine-mcp."
+              },
+              {
+                "uuid": "7556d8e7-8f95-5f13-81cf-8139ae78e84b",
+                "control-id": "ra-3",
+                "description": "RA-3 satisfied + attested by consciousness-engine-mcp."
+              },
+              {
+                "uuid": "dd085881-c475-5825-a738-257417c786c5",
+                "control-id": "si-4",
+                "description": "SI-4 satisfied + attested by consciousness-engine-mcp."
               }
             ]
           }

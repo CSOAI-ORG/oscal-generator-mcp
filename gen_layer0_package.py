@@ -63,6 +63,7 @@ LAYER0 = [
     {"name": "agent-commerce-protocol-mcp", "frameworks": ["DORA"]},
     {"name": "agent-commerce-payments-mcp", "frameworks": ["PCI-DSS", "DORA"]},
     {"name": "agent-content-watermark-mcp", "frameworks": ["EU AI Act"]},
+    {"name": "bft-progress-council-mcp", "frameworks": ["EU AI Act", "NIST", "ISO 42001"]},
     # article-level framework MCPs
     {"name": "eu-ai-act-compliance-mcp", "frameworks": ["EU AI Act"]},
     {"name": "dora-compliance-mcp", "frameworks": ["DORA"]},
@@ -74,6 +75,29 @@ LAYER0 = [
     {"name": "aml-ai-mcp", "frameworks": ["AML"]},
     {"name": "basel-ai-overlay-mcp", "frameworks": ["NIST", "SOX"]},
     {"name": "soc2-compliance-ai-mcp", "frameworks": ["NIST", "ISO 42001"]},
+    {"name": "iso-42001-ai-mcp", "frameworks": ["ISO 42001", "EU AI Act"]},
+    {"name": "nist-rmf-ai-mcp", "frameworks": ["NIST", "EU AI Act"]},
+    {"name": "meok-eu-ai-act-art-26-fria-mcp", "frameworks": ["EU AI Act Art.26 (FRIA)"]},
+    {"name": "meok-eu-ai-act-art-13-ifu-mcp", "frameworks": ["EU AI Act Art.13 (IFU)"]},
+    {"name": "meok-cra-annex-iv-classifier-mcp", "frameworks": ["EU CRA Annex IV"]},
+    {"name": "meok-cra-art14-reporter-mcp", "frameworks": ["EU CRA Art.14"]},
+    {"name": "meok-dora-tlpt-planner-mcp", "frameworks": ["DORA Art.26 (TLPT)"]},
+    {"name": "meok-nis2-de-register-mcp", "frameworks": ["NIS2 (DE)"]},
+    {"name": "owasp-agentic-mcp", "frameworks": ["OWASP Agentic Top 10"]},
+    {"name": "meok-governance-engine-mcp", "frameworks": ["EU AI Act", "GDPR", "DORA", "NIS2", "ISO 42001"]},
+    {"name": "csoai-governance-crosswalk-mcp", "frameworks": ["EU AI Act", "GDPR", "DORA", "NIS2", "ISO 42001", "NIST", "HIPAA", "SOX", "PCI-DSS", "MiFID II", "Solvency II", "CSRD", "AML"]},
+    {"name": "healthcare-ai-governance-mcp", "frameworks": ["HIPAA", "EU MDR", "EU AI Act"]},
+    {"name": "ai-bom-mcp", "frameworks": ["EU AI Act", "NIST", "ISO 42001"]},
+    {"name": "bias-detection-mcp", "frameworks": ["EU AI Act", "ECOA", "NYC LL144"]},
+    {"name": "care-membrane-mcp", "frameworks": ["EU AI Act", "GDPR"]},
+    {"name": "c2pa-watermark-mcp", "frameworks": ["EU AI Act Art.50 (C2PA)"]},
+    {"name": "meok-coinbase-x402-receipt-mcp", "frameworks": ["MiCA", "DORA"]},
+    {"name": "firmware-attestation-mcp", "frameworks": ["EU CRA", "IEC 62443"]},
+    {"name": "meok-abci-bridge-mcp", "frameworks": ["MiCA", "DORA"]},
+    {"name": "a2a-governance-bridge-mcp", "frameworks": ["EU AI Act"]},
+    {"name": "meok-haulage-governance-bridge-mcp", "frameworks": ["NIS2", "GDPR"]},
+    {"name": "proofof-ai-mcp", "frameworks": ["EU AI Act", "ISO/IEC 42001"]},
+    {"name": "consciousness-engine-mcp", "frameworks": ["EU AI Act"]},
 ]
 
 
@@ -87,10 +111,13 @@ def main():
         "canonical_sha256": pkg.canonical_sha256, "sigil": pkg.sigil}, indent=2))
     # verify what we just wrote
     v = srv.verify_oscal_signature(pkg.document, pkg.signature, pkg.public_key)
+    # strict-validate through the standard OSCAL toolchain (compliance-trestle), best-effort
+    sv = srv.validate_oscal_strict(pkg.document)
     print(f"components: {pkg.component_count}")
     print(f"sha256(canonical): {pkg.canonical_sha256}")
     print(f"Ed25519 sig: {pkg.signature[:32]}...")
     print(f"signature verifies: {v['valid']}")
+    print(f"OSCAL strict-valid ({sv.validator}): {sv.valid}" + (f" — {sv.note}" if sv.note else ""))
     print(f"written: {out.name} + {out.with_suffix('.sig.json').name}")
     return v["valid"]
 

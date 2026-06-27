@@ -8,7 +8,8 @@ Component Definition) and runs an RFC-0024 readiness check. FedRAMP RFC-0024
 30 Sep 2026 — yet ~0 of 100+ 2025 Rev5 authorizations produced OSCAL. This
 closes that vacuum: a system description in → valid OSCAL JSON out, signed.
 
-Tools: generate_ssp · generate_component_definition · validate_oscal · rfc0024_readiness
+Tools: generate_ssp · generate_component_definition · validate_oscal ·
+       validate_oscal_strict (trestle/NIST-grade) · rfc0024_readiness
 """
 from mcp.server.fastmcp import FastMCP
 from pydantic import BaseModel, Field
@@ -177,6 +178,67 @@ def validate_oscal(document: Dict[str, Any]) -> Validation:
         if not body.get("system-characteristics"):
             errors.append("ssp: missing system-characteristics")
     return Validation(valid=not errors, model=roots[root], errors=errors, warnings=warnings)
+
+
+# ── Strict validation: stand on the standard OSCAL toolchain (compliance-trestle) ──
+# Our own validate_oscal is the fast, dependency-free path. validate_oscal_strict
+# delegates to oscal-compass/compliance-trestle's NIST-schema-derived pydantic models
+# — the authoritative community validator — so a package that passes here is
+# "validates under the standard OSCAL toolchain," not just our own checks.
+_TRESTLE_ROOTS = {
+    "system-security-plan": ("trestle.oscal.ssp", "SystemSecurityPlan"),
+    "component-definition": ("trestle.oscal.component", "ComponentDefinition"),
+    "catalog": ("trestle.oscal.catalog", "Catalog"),
+    "profile": ("trestle.oscal.profile", "Profile"),
+    "assessment-plan": ("trestle.oscal.assessment_plan", "AssessmentPlan"),
+    "plan-of-action-and-milestones": ("trestle.oscal.poam", "PlanOfActionAndMilestones"),
+}
+
+
+class StrictValidation(BaseModel):
+    valid: bool
+    validator: str  # "compliance-trestle" | "builtin-fallback"
+    model: Optional[str] = None
+    trestle_available: bool = False
+    errors: List[str] = Field(default_factory=list)
+    note: str = ""
+
+
+@mcp.tool()
+def validate_oscal_strict(document: Dict[str, Any]) -> StrictValidation:
+    """Strictly validate an OSCAL document against the standard community toolchain
+    (oscal-compass/compliance-trestle's NIST-schema-derived models). If trestle isn't
+    installed (pip install 'oscal-generator-mcp[validate]'), this gracefully falls back
+    to the built-in structural validator and says so. A pass here = "validates under the
+    standard OSCAL toolchain" — the credibility claim for the FedRAMP RFC-0024 wedge."""
+    root = next((k for k in _TRESTLE_ROOTS if k in document), None)
+    if root is None:
+        return StrictValidation(valid=False, validator="builtin-fallback",
+                                errors=[f"No OSCAL root model found (expected one of {list(_TRESTLE_ROOTS)})."])
+    mod_name, cls_name = _TRESTLE_ROOTS[root]
+    try:
+        import importlib
+        cls = getattr(importlib.import_module(mod_name), cls_name)
+    except Exception:
+        fb = validate_oscal(document)  # graceful fallback — never hard-fail on a missing optional dep
+        return StrictValidation(valid=fb.valid, validator="builtin-fallback", model=fb.model,
+                                trestle_available=False, errors=fb.errors,
+                                note="compliance-trestle not installed; used the built-in structural validator. "
+                                     "Install with: pip install 'oscal-generator-mcp[validate]' for NIST-grade validation.")
+    body = document[root]
+    try:
+        if hasattr(cls, "model_validate"):      # pydantic v2 (trestle 4.x)
+            cls.model_validate(body)
+        else:                                    # pydantic v1 fallback
+            cls.parse_obj(body)
+        return StrictValidation(valid=True, validator="compliance-trestle", model=root,
+                                trestle_available=True,
+                                note=f"Validated against compliance-trestle's {cls_name} model (NIST OSCAL {OSCAL_VERSION}).")
+    except Exception as e:
+        msgs = [ln for ln in str(e).splitlines() if ln.strip()][:25]
+        return StrictValidation(valid=False, validator="compliance-trestle", model=root,
+                                trestle_available=True, errors=msgs,
+                                note=f"Failed compliance-trestle {cls_name} validation.")
 
 
 # Honest, approximate framework → representative NIST 800-53 control crosswalk.

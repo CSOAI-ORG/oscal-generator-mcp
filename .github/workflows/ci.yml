@@ -44,3 +44,37 @@ jobs:
 
       - name: Check metadata
         run: twine check dist/*
+
+      # ── Validate the signed Layer-0 package against the STANDARD OSCAL toolchain ──
+      # compliance-trestle (oscal-compass) = the authoritative community validator.
+      # A pass here means "validates under the standard OSCAL toolchain", the
+      # credibility claim for the FedRAMP RFC-0024 machine-readable mandate.
+      - name: OSCAL strict-validate via compliance-trestle
+        if: matrix.python-version == '3.11'
+        run: |
+          pip install 'compliance-trestle>=4.0.0'
+          out=$(python gen_layer0_package.py)
+          echo "$out"
+          echo "$out" | grep -q "signature verifies: True" || { echo "::error::Ed25519 signature did not verify"; exit 1; }
+          echo "$out" | grep -q "strict-valid (compliance-trestle): True" || { echo "::error::Layer-0 package failed compliance-trestle validation"; exit 1; }
+          echo "✓ Layer-0 OSCAL package: Ed25519-signed AND validates under compliance-trestle"
+
+      # ── Best-effort: also validate with NIST's own oscal-cli (Java) ──
+      # Non-blocking — proves the package passes the official NIST tool when available.
+      - name: OSCAL validate via NIST oscal-cli (best-effort)
+        if: matrix.python-version == '3.11'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -x
+          gh release download --repo usnistgov/oscal-cli --pattern '*-oscal-cli.zip' --dir /tmp/oscalcli || \
+            gh release download --repo usnistgov/oscal-cli --pattern '*.zip' --dir /tmp/oscalcli
+          unzip -q /tmp/oscalcli/*.zip -d /tmp/oscalcli/bin || true
+          CLI=$(find /tmp/oscalcli -name 'oscal-cli' -type f | head -1)
+          if [ -n "$CLI" ]; then
+            chmod +x "$CLI"
+            "$CLI" validate layer0_protocol.oscal.json && echo "✓ NIST oscal-cli: VALID" || echo "oscal-cli reported issues (non-blocking)"
+          else
+            echo "oscal-cli not resolved — skipping (non-blocking)"
+          fi
