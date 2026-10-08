@@ -11,7 +11,7 @@ closes that vacuum: a system description in → valid OSCAL JSON out, signed.
 Tools: generate_ssp · generate_component_definition · validate_oscal ·
        validate_oscal_strict (trestle/NIST-grade) · rfc0024_readiness
 """
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer as FastMCP  # mcp 2.x: FastMCP renamed MCPServer
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 
@@ -352,6 +352,37 @@ def rfc0024_readiness(has_ssp: bool = False, has_component_def: bool = False, ma
     gaps = [f"Missing: {k}" for k, v in checks.items() if not v]
     return Readiness(ready=passed == len(checks), score=score, gaps=gaps,
                      note="RFC-0024 requires machine-readable packages by 30 Sep 2026; ~0 of 100+ 2025 authorizations produced OSCAL — generating + signing it now is a first-mover wedge.")
+
+
+# ---------------------------------------------------------------------------
+# MCP 2026-07-28 wire - header-add migration (2026-10-08)
+# ---------------------------------------------------------------------------
+# stdio carries no HTTP headers, so Mcp-Method / Mcp-Name are not applicable to
+# this transport at runtime. When oscal-generator-mcp is exposed over HTTP, route the ingress
+# through the vendored mcp2026_shim (ShimASGI): it validates Mcp-Method /
+# Mcp-Name, injects params._meta.protocolVersion = "2026-07-28" into every
+# request, strips Mcp-Session-Id and answers legacy initialize / server-discover
+# locally (the session header is never emitted - stateless wire).
+# Refs: MIGRATION_NOTE.md, MCP_2026_WIRE_MIGRATION_PLAN_2026-10-07.md (3) + (4).
+# ---------------------------------------------------------------------------
+
+
+def http_app():
+    """ASGI app for HTTP exposure, wrapped in the 2026-07-28 wire shim.
+
+    stdio (``mcp.run()``) needs no shim; this is the enable path once the
+    server is fronted by an HTTP transport. Bodies are buffered, so responses
+    are requested in JSON mode rather than SSE.
+    """
+    from mcp2026_shim import WIRE_2026, ShimASGI, ShimConfig
+
+    return ShimASGI(
+        mcp.streamable_http_app(json_response=True),
+        ShimConfig(
+            protocol_version=WIRE_2026,
+            server_info={"name": "oscal-generator-mcp", "version": "0.1.1"},
+        ),
+    )
 
 
 def main():
