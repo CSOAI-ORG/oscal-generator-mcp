@@ -11,7 +11,7 @@ closes that vacuum: a system description in → valid OSCAL JSON out, signed.
 Tools: generate_ssp · generate_component_definition · validate_oscal ·
        validate_oscal_strict (trestle/NIST-grade) · rfc0024_readiness
 """
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer as FastMCP  # mcp 2.x: FastMCP renamed MCPServer
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 
