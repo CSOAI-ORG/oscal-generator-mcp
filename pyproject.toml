@@ -19,4 +19,4 @@ validate = ["compliance-trestle>=4.0.0"]
 oscal-generator-mcp = "server:main"
 
 [tool.setuptools]
-py-modules = ["server"]
+py-modules = ["server", "mcp2026_shim"]
